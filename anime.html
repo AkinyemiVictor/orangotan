@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="anime.css">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+        <title>ORANGOTAN/animes</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <div id="navCont" class="navCont">
+
+                       <div id="logoPhrase">
+                           <h1 id="logo">ORANGOTAN</h1>
+                           <p id="phrase">We deliver clean entertainment!</p>
+                       </div>
+
+                       <div id="menuBar" class="menuBar">
+                            <div id="menu"><a href="">Home</a></div>
+                            <div id="menu"><a href="">Movies</a></div>
+                            <div id="menu"><a href="">Anime</a></div>
+                            <div id="menu"><a href="">Cartoons</a></div>
+                            <div id="menu"><a href="">Series & Tv shows</a></div>
+                       </div>
+                       
+                       <div id="searchProfile" class="searchProfile">
+                       <div class="searchBar"><i class="bi bi-search" id="searchIcon"></i><input id='searchInput' type="text" placeholder="Search..."> </div>
+
+                       <div id="profileHolder" class="profileHolder">
+                         <img id="profileImage" class="profileImage" src="profile picture.jpg" alt="">
+                         <button id="premiumOption" class="premiumOption"><i class="bi bi-gem" id="premiumIcon"></i>Get Premium</button>
+                       </div>
+
+                       </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <div id="darkModeSwitch">
+                <p>Light Mode</p>
+                <div id="modeSwitchCase"><button id="modeSwithBall"></button></div>
+               
+            </div>
+
+            <div id="noticeDiv">
+                <div id="noticeBoard">
+                  <div id="cancelNotice"><i class="fa-regular fa-rectangle-xmark" id="closeIcon"></i></div>
+                  <div id="noticeContainer">
+                      <p id="noticeHeader">Notice</p>
+                      <p id="note">Due to the large list of anime, you might find it daunting just scrolling down the endless list.
+                        Feel free to use the <b>filter</b> and<b> sort</b> sections to search faster, or better yet you could also use the search bar in the header section. cheers!
+                      Enjoy!!! 🥂.</p>
+                  </div>
+                </div>
+            </div>
+
+            <section id="ad5">
+                <div id="D5">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="filterDiv">
+                <div id="filter">
+                   <p id="filterTextIcon">Filter<i class="fa-solid fa-filter" id="filterIcon"></i></p>
+                   <div id="filterContainer">
+                    <div id="categories">
+                      <p id="categoryText">Categories</p>
+                      <div id="categoryContent">
+                      <button id="filt">Chinese</button>
+                      <button id="filt">Japanese</button>
+                      <button id="filt">Korean</button>
+                      </div>
+                    </div>
+                    <div id="genreFilter">
+                        <p id="genreText">Genre</p>
+                        <div id="filterContent">
+                        <button id="filt">Action</button>
+                        <button id="filt">Adventure</button>
+                        <button id="filt">Slice of Life</button>
+                        <button id="filt">Harem</button>
+                        <button id="filt">Mecha</button>
+                        <button id="filt">Supernatural</button>
+                        <button id="filt">Isekai</button>
+                        <button id="filt">Seinen</button>
+                        <button id="filt">Shoujo</button>
+                        <button id="filt">Musical</button>
+                        <button id="filt">Fantasy</button>
+                        <button id="filt">Biographical</button>
+                        <button id="filt">Drama</button>
+                        <button id="filt">Josei</button>
+                        <button id="filt">Historical</button>
+                        <button id="filt">Shonen</button>
+                        <button id="filt">Mystery</button>
+                        <button id="filt">Phsycology</button>
+                        <button id="filt">Yaoi</button>
+                        <button id="filt">Ecchi</button>
+                        <button id="filt">Crime</button>
+                        <button id="filt">Comedy</button>
+                        <button id="filt">Romance</button>
+                        <button id="filt">Sci-Fi</button>
+                        <button id="filt">Sport</button>
+                        <button id="filt">Thriller</button>
+                        <button id="filt">Short</button>
+                        <button id="filt">Horror</button>
+                        <button id="filt">Other</button>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+             </section>
+
+             <section id="ad6"><div id="D6"><p>Ad</p></div></section>
+
+             <section id="sortDiv">
+                <div id="sort">
+                   <p id="sortTextIcon">Sort <i class="fa-solid fa-arrow-down-a-z" id="sortIcon"></i></p>
+                   <div id="sortContainer">
+                    <p id="orderText">Order</p>
+                      <button id="srt">#</button>
+                      <button id="srt">A</button>
+                      <button id="srt">B</button>
+                      <button id="srt">C</button>
+                      <button id="srt">D</button>
+                      <button id="srt">E</button>
+                      <button id="srt">F</button>
+                      <button id="srt">G</button>
+                      <button id="srt">H</button>
+                      <button id="srt">I</button>
+                      <button id="srt">J</button>
+                      <button id="srt">K</button>
+                      <button id="srt">L</button>
+                      <button id="srt">M</button>
+                      <button id="srt">N</button>
+                      <button id="srt">O</button>
+                      <button id="srt">P</button>
+                      <button id="srt">Q</button>
+                      <button id="srt">R</button>
+                      <button id="srt">S</button>
+                      <button id="srt">T</button>
+                      <button id="srt">U</button>
+                      <button id="srt">V</button>
+                      <button id="srt">W</button>
+                      <button id="srt">X</button>
+                      <button id="srt">Y</button>
+                      <button id="srt">Z</button>
+                   </div>
+                </div>
+             </section>
+
+             <section id="ad7">
+                <div id="D7">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <p id="movieText">Anime</p>
+                   <div id="movieListContainer">
+                    <div id="highlightText">A</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">American society of magical negroes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A Baby at any cost</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bad idea gone wrong</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bag of hammers</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A ballerina tale</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A beautiful day in the neighborhood </a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A beautiful mind</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bees diary</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A beginners guide to endings</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A beginners guide to snuff</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bent in the river</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bennett song holiday</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A better place</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A big fat family christmas</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bigger splash</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bill of divorcement</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A billion lives</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A biltmore christmas</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A bird of the air</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">A black veil for lisa</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad8">
+                <div id="D8">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">B</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad9">
+                <div id="D9">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">C</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad10">
+                <div id="D10">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">D</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad11">
+                <div id="D11">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">E</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad12">
+                <div id="D12">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">F</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad13">
+                <div id="D13">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">G</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad14">
+                <div id="D14">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">H</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad15">
+                <div id="D15">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">I</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad16">
+                <div id="D16">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">J</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad17">
+                <div id="D17">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">K</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad18">
+                <div id="D18">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">L</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad19">
+                <div id="D19">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">M</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad20">
+                <div id="D20">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">N</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad21">
+                <div id="D21">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">O</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad22">
+                <div id="D22">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">P</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad23">
+                <div id="D23">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">Q</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad24">
+                <div id="D24">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">R</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad25">
+                <div id="D25">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">S</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad26">
+                <div id="D26">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">T</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad27">
+                <div id="D27">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">U</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad28">
+                <div id="D28">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">V</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad29">
+                <div id="D29">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">W</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad30">
+                <div id="D30">
+                <div id="subAd1"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">X</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad31">
+                <div id="D31">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                <div id="subAd3"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">Y</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ad32">
+                <div id="D32">
+                <div id="subAd1"><p>Ad</p></div>
+                <div id="subAd2"><p>Ad</p></div>
+                </div>
+            </section>
+
+            <section id="movieListDiv">
+                <div id="movieList">
+                   <div id="movieListContainer">
+                      <div id="highlightText">Z</div>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black panther</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Black adam</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad boys for life</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bloodshot</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bumblebee</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Blue beetle</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Break</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Bad Boys: ride or die</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beetlejuice Beetlejuice</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Back to black</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Babes</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Becky</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Beverly hills cop: axel f</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Barbie</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Breathe</a></i>
+                      <i class="fa-solid fa-square" id="movieBullet"><a id="movieItem" href="">Brandy hellville & the cult of fast fashion movie</a></i>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+
+    <footer>
+        <div id="disclaimerPrivacyPolicyTermsCopyRight">
+            <p id="disclaimer"><a href="">Disclaimer</a></p>
+            <p id="">-</p>
+            <p id="privacypolicy"><a href="">Privacy Policy</a></p>
+            <p id="">-</p>
+            <p id="terms"><a href="">Terms</a></p>
+            <p id="">-</p>
+            <p id="copyright"><a href="">©️2024</a>.</p>
+            <p id="design">Designed for ORANGOTAN.Net</p>
+        </div>
+    </footer>
+    </html>

@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: poppins, Tahoma, Verdana;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: poppins, Tahoma, Verdana;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    background:  #f2f2f2;
+     width: 8px;
+     border-radius: 5px;
+     visibility: hidden;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar:hover {
+     visibility: visible;
+ }
+ body::-webkit-scrollbar-thumb {
+    background:  #000000;
+     width: 8px;
+     border-radius: 5px;
+     visibility: hidden;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar-thumb:hover{
+     visibility: visible;  
+ }
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+   /* border: 1px solid #fff; */
+    overflow: hidden;
+    box-shadow: 0px 0px 25px -8px #000000;
+}
+body::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #ffffff;
+    opacity: .5;
+    z-index: -1;
+}
+body::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg transparent #ffffff);
+    z-index: -1;
+}
+ header nav{
+    width: 100%;
+    height: 10%;
+  /*  border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+}
+header nav #navCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    margin: auto;
+}
+header nav .navCont #logoPhrase {
+    position: relative;
+    display: block; 
+    margin: none;
+}
+header nav .navCont #logoPhrase #logo {
+    text-align: center;
+    margin: 0px;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #000000;
+}
+header nav .navCont #logoPhrase #phrase {
+    text-align: center;
+    margin: 0px; 
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+}
+header nav .navCont #menuBar {
+    display: flex;
+    align-items: center;
+}
+header nav .navCont #menuBar #menu {
+   padding: 3px 15px;
+}
+header nav .navCont #menuBar #menu a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #000000;
+    transition: .3s linear;
+}
+header nav .navCont #menuBar #menu a:hover {
+    color: #777777;
+}
+header nav #searchProfile {
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav #searchProfile .searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px 0px 0px;
+    width: 232px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+}
+header nav #searchProfile .searchBar #searchIcon {
+    margin: 0px 5px 0px 5px;
+    width: 15px;
+    height: 15px;
+}
+header nav #searchProfile .searchBar #searchInput {
+    outline: none;
+    width: 198px;
+    height: 30px;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none;
+}
+header nav #searchProfile .searchBar #searchInput::placeholder {
+    color: #000000;
+    font-size: 12px;
+}
+header nav #searchProfile #profileHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 27px;
+    border-radius: 100%;
+}
+header nav #searchProfile #profileHolder #profileImage{
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    margin: 0px 5px 0px 0px;
+}
+header nav #searchProfile #profileHolder #premiumOption{
+    width: 133px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bolder;
+    padding-left: 5px;
+}
+header nav #searchProfile #profileHolder #premiumOption #premiumIcon{
+    width: 15px;
+    height: 15px;
+    font-weight: bolder;
+    color: lightblue;
+    margin-right: 5px;
+}
+header nav #profileHolder #premiumOption:hover {
+    background: #777777;
+}
+main #darkModeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+}
+main #darkModeSwitch p{
+    font-size: 12px;
+    margin: 0px;
+}
+main #darkModeSwitch #modeSwitchCase {
+    width: 65px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px ;
+}
+main #darkModeSwitch #modeSwitchCase #modeSwithBall {
+    width: 23px;
+    height: 23px;
+    border-radius: 100px;
+    margin-left: 10px;
+    background-color: #000000;
+}
+/*---------------------------------------------Ad-------------------------------------------*/
+main #ad33 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad33 #D33 {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad33 #D33 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad33 #D33 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad33 #D33 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad33 #D33 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------------------Ad-------------------------------------------------*/
+main #titlePlotSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #titlePlotSection #titlePlot {
+    width: 70%;
+    height: auto;
+}
+main #titlePlotSection #titlePlot #movieTitle {
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+main #titlePlotSection #titlePlot #plot {
+    font-size: 14px;
+    text-align: justify;
+}
+main #titlePlotSection #titlePlot #genreRating {
+    display: inline;
+}
+main #titlePlotSection #titlePlot #genreRating #genre{
+    margin: 0px 10px 0px 0px;
+    font-weight: bold;
+    color: #9e006a;
+}
+main #titlePlotSection #titlePlot #genreRating #year{
+    margin: 0px 10px 0px 0px;
+}
+main #titlePlotSection #titlePlot #genreRating #imdbicon {
+    margin: 0px 10px 0px 0px;
+    background: gold;
+}
+main #titlePlotSection #titlePlot #genreRating #rateIcon {
+    margin: 0px 10px 0px 0px;
+    color: yellow;
+}
+main #titlePlotSection #titlePlot #genreRating #rateNumber {
+     
+}
+main #trailerSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #trailerSection #trailerDiv {
+    width: 70%;
+    height: auto;
+}
+main #trailerSection #trailerDiv #trailer {
+    width: 100%;
+    height: auto;
+}
+main #trailerSection #trailerDiv #trailer #content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #trailerSection #trailerDiv #trailer #content #iframe {
+    box-shadow: 0px 0px 25px -12px #000000;
+}
+
+main #trailerSection #trailerDiv #trailerText {
+    font-size: 24px;
+    font-weight: bolder;
+}
+/*---------------------------------------------Ad-------------------------------------------*/
+main #ad34 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad34 #D34 {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad34 #D34 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad34 #D34 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad34 #D34 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad34 #D34 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad34 #D34 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad34 #D34 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------------------Ad-------------------------------------------------*/
+main #movieSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #movieSection #movieDiv {
+    width: 70%;
+    height: auto;
+}
+main #movieSection #movieDiv #movieText {
+    font-size: 24px;
+    font-weight: bolder;
+}
+main #movieSection #movieDiv #movie {
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 25px -12px #000000;
+}
+main #movieSection #movieDiv #movie #subtitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #movieSection #movieDiv #movie #subtitle #s {
+    display: inline;
+    margin: 0px 30px 40px 30px;
+}
+main #movieSection #movieDiv #movie #subtitle #s #b {
+    font-weight: bold;
+    margin: 0px 10px 0px 0px;
+}
+main #movieSection #movieDiv #movie #subtitle #s #english {
+    margin: 0px 10px 0px 0px;
+    text-decoration: none;
+    font-weight: 400;
+}
+main #movieSection #movieDiv #movie #content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 50px 30px 20px 30px;
+   
+}
+main #movieSection #movieDiv #movie #content #watch {
+    width: 200px;
+    height: 50px;
+    margin-right: 20px; 
+    color: #f2f2f2;
+    background: #000000;
+    border-radius: 8px;
+    border: 0px; 
+    font-weight: bold;
+}
+main #movieSection #movieDiv #movie #content #download {
+    width: 200px;
+    height: 50px;
+    color: #f2f2f2;
+    background: #000000;
+    border-radius: 8px;
+    border: 0px; 
+    font-weight: bold;
+}
+/*---------------------------------------------Ad-------------------------------------------*/
+main #ad35 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad35 #D35 {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad35 #D35 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad35 #D35 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad35 #D35 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad35 #D35 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad35 #D35 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad35 #D35 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------------------Ad-------------------------------------------------*/
+main #relatedMoviesSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #relatedMoviesSection #relatedMoviesDiv {
+    width: 70%;
+}
+main #relatedMoviesSection #relatedMoviesDiv #relatedMoviesText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #divMovie {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie {
+    width: 180px;
+    height: 302.13px;
+    margin: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #moviePoster {
+    width: 160px;
+    height: 210px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description {
+    width: 160px;
+    height: 72.13px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #title {
+    width: auto;
+    height: auto;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #title p {
+    width: auto;
+    height: px;
+    margin: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #genreRating {
+    width: auto;
+    height: 13.13px;
+    display: flex;
+    font-weight: bold;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #genreRating p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: auto;
+    font-size: 10px;
+    margin-left: 0px;
+    margin-right:auto;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #genreRating #rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #genreRating #rating #imdbicon {
+    background-color: gold;
+    color: black;
+    stroke: 0px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #genreRating #rating #rateIcon {
+    color: yellow;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #genreRating #rating p {
+    margin-left: 0px;
+    margin-right:auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #plot {
+    font-size: 10px;
+    font-weight: 900px;
+    margin-top: 3px;
+}
+main #relatedMoviesSection #relatedMoviesDiv #movie #content #description #plot #dots {
+    
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight {
+    display: flex;
+    justify-content: center;
+    overscroll-behavior-block: contain;
+    margin: 30px 0px 30px 0px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #disclaimer {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #privacypolicy {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #terms {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #copyright {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}footer #disclaimerPrivacyPolicyTermsCopyRight #design {
+    
+}

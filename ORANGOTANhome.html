@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ORANGOTAN.css">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+        <title>ORANGOTAN</title>
+    </head>
+
+    <body id="body">
+        <header>
+            <nav>
+                <div id="navCont" class="navCont">
+
+                       <div id="logoPhrase">
+                           <h1 id="logo">ORANGOTAN</h1>
+                           <p id="phrase">We deliver clean entertainment!</p>
+                       </div>
+
+                       <div id="navSearchPremium">
+                       <div id="menuBar" class="menuBar">
+                            <div id="menu" ><a href="" id="home">Home</a></div>
+                            <div id="menu"><a href="" id="movies">Movies</a></div>
+                            <div id="menu"><a href="" id="animes">Anime</a></div>
+                            <div id="menu"><a href="" id="cartoons">Cartoons</a></div>
+                            <div id="menu"><a href="" id="serie">Series & Tv shows</a></div>
+                       </div>
+                       
+                       <div id="searchProfile" class="searchProfile">
+                       <div class="searchBar"><i class="bi bi-search" id="searchIcon"></i><input id='searchInput' type="text" placeholder="Search..."> </div>
+
+                       <div id="profileHolder" class="profileHolder">
+                         <img id="profileImage" class="profileImage" src="profile picture.jpg" alt="">
+                         <button id="premiumOption" class="premiumOption"><i class="bi bi-gem" id="premiumIcon"></i>Get Premium</button>
+                       </div>
+                       </div>
+                       </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="darkModeSwitch">
+                <p>Light Mode</p>
+                <div id="modeSwitchCase"><button id="modeSwithBall" onclick="modeSwitcher()"></button></div>
+               
+            </div>
+
+            <div id="noticeDiv">
+              <div id="noticeBoard">
+                <div id="cancelNotice"><i class="fa-regular fa-rectangle-xmark" id="closeIcon"></i></div>
+                <div id="noticeContainer">
+                    <p id="noticeHeader">Notice</p>
+                    <p id="note">ORANGOTAN … not the monkey, 😂 and yes with an ‘o’, is a free movie website. We try to cover all cross-cultural ranges of
+                    Television Entertainment. From Hollywood to Nollywood, Bollywood, K-drama, you name it.<b> Note that we use ads for sustenance.
+                    Ads might open new tabs.</b> If you would like to have an ad free experience you can subscribe for premium package. And also if you would
+                    like to support us, feel free to do that at the donate section towards the end of the page, this gesture will go a long way. In cases where you do not find what
+                    you are looking for, you can request movies with the Name, Genre and date of release down below.
+                    Enjoy!!! 🥂.</p>
+                </div>
+              </div>
+           </div>
+
+           <section id="ad1"><div id="D1"><p>Ad</p></div></section>
+
+          <section id="newMoviesDiv">
+             <div id="newMovies">
+                <p id="newMovieText">New Movies</p>
+                <div id="newMoviesContainer">
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/dune_part_two.jpg" alt="dune_part_II"><div id="description"><div id="title"><p>Dune II</p></div><span id="genreRating"><p>Adventure, Sci-Fi</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>9.4</p></div></span><div id="plot">Following the destruction of House Atreides by House <span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/fall_guy.jpg" alt="fall_guy"><div id="description"><div id="title"><p>Fall Guy</p></div><span id="genreRating"><p>Action, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">Colt Seavers, a battered and past-his-prime action<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/snack_shack.jpg" alt="snack_shack"><div id="description"><div id="title"><p>Snack Shack</p></div><span id="genreRating"><p>Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>7.7</p></div></span><div id="plot">Two teenage friends, A.J. Carter and Moose Miller, pursue<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/cabrini.jpg" alt="cabrini"><div id="description"><div id="title"><p>Cabrini</p></div><span id="genreRating"><p>Biographical, Drama</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>7.9</p></div></span><div id="plot">In 1889 New York City, an Italian immigrant boy, Paolo<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/american_society_of_magical_negroes.jpg" alt="american_society_of_magical_negroes"><div id="description"><div id="title"><p>American Society of Magical Negroes</p></div><span id="genreRating"><p>Family, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>2.4</p></div></span><div id="plot">A young biracial African-<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/damsel.jpg" alt="damsel"><div id="description"><div id="title"><p>Damsel</p></div><span id="genreRating"><p>Adventure,Fantasy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.1</p></div></span><div id="plot">The first king of Aurea leads a futile attack on a dragon<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/madame_web.jpg" alt="madame_web"><div id="description"><div id="title"><p>Madame Web</p></div><span id="genreRating"><p>Mystery, Thriller</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>3.8</p></div></span><div id="plot">In 1973 in the jungles of Peru, a research team led by<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/argylle.jpg" alt="argylle"><div id="description"><div id="title"><p>Argylle</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>5.7</p></div></span><div id="plot">Elly Conway, an introverted spy novelist, has almost finished<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/challengers.jpg" alt="challengers"><div id="description"><div id="title"><p>Challengers</p></div><span id="genreRating"><p>Romance, Drama</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">Tashi, a former tennis prodigy turned coach is married to<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="movie"><div id="content"><img id="moviePoster" src="/posters & ads/Godzilla x Kong_ The New Empire (2024).jpg" alt="godzilla_x_kong_the_new_empire"><div id="description"><div id="title"><p>Godzilla X Kong: The New Empire</p></div><span id="genreRating"><p>Adventure, Sci-Fi</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.7</p></div></span><div id="plot">A few years after defeating<span id="dots">. . . .</span></div></div></div></div>
+                    <div id="moreMovies"><button id="forCursor"><p>More</p><i class="fa-solid fa-chevron-right" id="moreIcon"></i></button></div>
+                </div>
+             </div>
+          </section>
+
+          <section id="ad2">
+            <div id="D2">
+            <div id="subAd1"><p>Ad</p></div>
+            <div id="subAd2"><p>Ad</p></div>
+            <div id="subAd3"><p>Ad</p></div>
+            <div id="subAd4"><p>Ad</p></div>
+            </div>
+          </section>
+
+          <section id="newAnimeDiv">
+            <div id="newAnime">
+               <p id="newAnimeText">New Anime</p>
+               <div id="newAnimeContainer">
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/SK8 the Infinity (2021).jpg" alt="sk8 the infinity"><div id="description"><div id="title"><p>Sk8 The Infinity</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.0</p></div></span><div id="plot">In Okinawa, a group of hardcore skaters participate<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/Spy x Family (2022).jpg" alt="spy x family"><div id="description"><div id="title"><p>Spy X Family</p></div><span id="genreRating"><p>Action, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.4</p></div></span><div id="plot">In order to maintain the state of peace between the rival<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/demon_slayer.jpg" alt="demon slayer"><div id="description"><div id="title"><p>Demon Slayer: Kimetsu No Yaiba</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.6</p></div></span><div id="plot">Tanjiro Kamado is a kind<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/boruto.jpg" alt="boruto"><div id="description"><div id="title"><p>Boruto: Naruto Next Generations</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.5</p></div></span><div id="plot">Opening with a teenaged<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/black clover.jpg" alt="black clover"><div id="description"><div id="title"><p>Black Clover</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.2</p></div></span><div id="plot">The series focuses on Asta, a young orphan who is left to<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/blue eye samurai.png" alt="blue eye samurai"><div id="description"><div id="title"><p>Blue Eye Samurai</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.7</p></div></span><div id="plot">During Japan's Edo period (17th century), half-white half<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/vineland_saga.jpg" alt="vineland saga"><div id="description"><div id="title"><p>Vineland Saga</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.8</p></div></span><div id="plot">In 1013 AD, the young Thorfinn works for Askeladd in the<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/one-piece.jpg" alt="one piece"><div id="description"><div id="title"><p>One Piece</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>9.0</p></div></span><div id="plot">The series focuses on Monkey D. Luffy—a young man made<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/my hero academia.png" alt="my hero academia"><div id="description"><div id="title"><p>My Hero Academia</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.3</p></div></span><div id="plot">Izuku Midoriya is a young man who dreams of becoming<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="anime"><div id="content"><img id="animePoster" src="/posters & ads/naruto (2002).jpg" alt="naruto"><div id="description"><div id="title"><p>Naruto</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.4</p></div></span><div id="plot">A powerful fox known as the Nine-Tails attacks Konoha<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="moreAnime"><button id="forCursor"><p>More</p><i class="fa-solid fa-chevron-right" id="moreIcon"></i></button></div>
+               </div>
+            </div>
+         </section>
+
+         <section id="ad3">
+            <div id="D3">
+            <div id="subAd1"><p>Ad</p></div>
+            <div id="subAd2"><p>Ad</p></div>
+            <div id="subAd3"><p>Ad</p></div>
+            </div>
+          </section>
+
+          <section id="newCartoonDiv">
+            <div id="newCartoon">
+               <p id="newCartoonText">New Cartoons</p>
+               <div id="newCartoonContainer">
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Migration (2023).jpg" alt="migration"><div id="description"><div id="title"><p>Migration</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.7</p></div></span><div id="plot">In Moosehead Pond, somewhere in a New England<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Inside Out 2 (2024).jpg" alt="inside out II"><div id="description"><div id="title"><p>Inside Out II</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">Inside Out 2 returns to the mind of newly minted teenager<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/The Tiger's Apprentice (2024).jpg" alt="the tiger's apprentice"><div id="description"><div id="title"><p>The Tiger's Apprentice</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>5.7</p></div></span><div id="plot">Fifteen years later, Tom faces bullies at school, and when<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Orion and the Dark (2024).jpg" alt="orion & the dark"><div id="description"><div id="title"><p>Orion and the Dark</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.4</p></div></span><div id="plot">In 1995 Philadelphia, Orion is a severely anxious 11-year-old<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Young David (2023).jpg" alt="young david"><div id="description"><div id="title"><p>Young David</p></div><span id="genreRating"><p>Adventure, Family</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>7.8.</p></div></span><div id="plot">Young David explores the developmental years of<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Iwájú (2024).jpg" alt="iwájú"><div id="description"><div id="title"><p>Iwájú</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>7.2</p></div></span><div id="plot">On her tenth birthday, Tola Martins decides to travel<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/The Garfield Movie (2024).jpg" alt="the garfield movie"><div id="description"><div id="title"><p>The Garfield Movie</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">Garfield (voiced by Chris Pratt), the world-famous, Monday<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Despicable Me 4 (2024).jpg" alt="despicable me IV"><div id="description"><div id="title"><p>Despicable Me 4</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">Gru (Carell), the world's favorite supervillain-turned-Anti<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/Mooned (2023).jpg" alt="mooned"><div id="description"><div id="title"><p>Mooned</p></div><span id="genreRating"><p>Short, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.1</p></div></span><div id="plot">The short begins with a recap of the events of the first film<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="cartoon"><div id="content"><img id="cartoonPoster" src="/posters & ads/spiderman_across_the_spiderverse.jpg" alt="spide-rman across the spiderverse"><div id="description"><div id="title"><p>Spider-Man Across the Spider-Verse</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.6</p></div></span><div id="plot">On Earth-65, police captain<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="moreCartoon"><button id="forCursor"><p>More</p><i class="fa-solid fa-chevron-right" id="moreIcon"></i></button></div>
+               </div>
+            </div>
+         </section>
+
+         <section id="ad4">
+            <div id="D4">
+            <div id="subAd1"><p>Ad</p></div>
+            </div>
+          </section>
+
+          <section id="newSeriesDiv">
+            <div id="newSeries">
+               <p id="newSeriesText">New Series & Tv shows</p>
+               <div id="newSeriesContainer">
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/The Gentlemen (2024).jpg" alt="the gentlemen"><div id="description"><div id="title"><p>The Gentlemen</p></div><span id="genreRating"><p>Comedy, Crime</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.3</p></div></span><div id="plot">Edward Horniman has unexpectedly inherited an<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/Fallout (2024).jpg" alt="fallout"><div id="description"><div id="title"><p>Fallout</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">The show depicts the aftermath of an apocalyptic nuclear<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/Avatar_ The Last Airbender (2024).jpg" alt="avatar the last airbender"><div id="description"><div id="title"><p>Avatar: The Last Airbender</p></div><span id="genreRating"><p>Action, Adventure</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>7.3</p></div></span><div id="plot">The series is set in a war<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/3 Body Problem (2024).jpg" alt="3 Body Problem"><div id="description"><div id="title"><p>3 Body Problem</p></div><span id="genreRating"><p>Biographical, Drama</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>7.6</p></div></span><div id="plot">Ye Wenjie is an astrophysicist who sees her father beaten<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/Home Economics (2021).jpg" alt="home economics"><div id="description"><div id="title"><p>Home Economics</p></div><span id="genreRating"><p>Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.9</p></div></span><div id="plot">Home Economics follows the lives of three siblings. Tom<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/Red Queen (2024).jpg" alt="red queen"><div id="description"><div id="title"><p>Red Queen</p></div><span id="genreRating"><p>Mystery, Thriller</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>6.8</p></div></span><div id="plot">The world's most intelligent person, Antonia Scott, is<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/The White Lotus (2021).jpg" alt="the white lotus"><div id="description"><div id="title"><p>The White Lotus</p></div><span id="genreRating"><p>Comedy, Drama</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.0</p></div></span><div id="plot">Shane Patton watches as a box containing human remains<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/Manhunt (2024).jpg" alt="manhunt"><div id="description"><div id="title"><p>Manhunt</p></div><span id="genreRating"><p>Adventure, Comedy</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>NaN</p></div></span><div id="plot">After President Abraham Lincoln's assassination<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/Tokyo Vice (2022).jpg" alt="tokyo vice"><div id="description"><div id="title"><p>Tokyo Vice</p></div><span id="genreRating"><p>Crime, Drama</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.0</p></div></span><div id="plot">In 1999, American journalist Jake Adelstein has relocated<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="series"><div id="content"><img id="seriesPoster" src="/posters & ads/The Boys (2019).jpg" alt="the boys"><div id="description"><div id="title"><p>The Boys</p></div><span id="genreRating"><p>Action, Drama</p><div id="rating"><i class="fa-brands fa-imdb" id="imdbicon"></i><i class="fa-solid fa-star" id="rateIcon"></i><p>8.7</p></div></span><div id="plot">The Boys is set in a universe where superpowered<span id="dots">. . . .</span></div></div></div></div>
+                   <div id="moreSeries"><button id="forCursor"><p>More</p><i class="fa-solid fa-chevron-right" id="moreIcon"></i></button></div>
+               </div>
+            </div>
+         </section>
+
+         <section id="supportContactRequest">
+            <div id="supportContactRequestHolder">
+            <div id="supportContact">
+
+                <div id="support">
+                    <p id="supportText">Support Us</p>
+                    <p id="supportPhrase">If  you enjoy our site please  take the time to donate so we can help serve you better.
+                    click the button below to donate. Thanks! </p>
+                    <button id="donateButton">Support</button>
+                </div>
+
+                <div id="contact">
+                    <p id="contactText">Contact Us</p>
+                    <p id="contactPhrase">Trying to reach us?. Send us an Email at orangotan@gmail.com. Thanks! </p>
+                    <button id="contactButton">Write Us</button>
+                </div>
+            </div>
+
+            <div id="request">
+                <p id="requestText">Request Movie</p>
+                <form id="requestForm">
+                    
+                    <label for="nameOfMovie">Name:</label>
+                    <input id="nameOfMovie" type="text" placeholder="Type name of movie">
+                    <label for="genreType">Genre:</label>
+                    <input id="genreType" type="text" placeholder="Type genre">
+                    <label for="dateOfRelease">D.O.R:</label>
+                    <input id="dateOfRelease" type="date">
+                    <button id="submitRequest">Request</button>
+                   
+                </form>
+            </div>
+            </div>
+          </section>
+         <script src="ORANGOTAN.js"></script>
+        </main>
+    </body>
+
+    <footer>
+        <div id="disclaimerPrivacyPolicyTermsCopyRight">
+            <p id="disclaimer"><a href="">Disclaimer</a></p>
+            <p id="">-</p>
+            <p id="privacypolicy"><a href="">Privacy Policy</a></p>
+            <p id="">-</p>
+            <p id="terms"><a href="">Terms</a></p>
+            <p id="">-</p>
+            <p id="copyright"><a href="">©️2024</a>.</p>
+            <p id="design">Designed for ORANGOTAN.Net</p>
+        </div>
+    </footer>
+</html> 

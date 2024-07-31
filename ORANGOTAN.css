@@ -1,0 +1,1199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: poppins, Tahoma, Verdana;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: poppins, Tahoma, Verdana;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    background:  #f2f2f2;
+     width: 8px;
+     border-radius: 5px;
+     visibility: visible;
+     height: 100px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ 
+ body::-webkit-scrollbar-thumb {
+    background:  #000000;
+     width: 8px;
+     border-radius: 5px;
+     visibility: visible;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar-thumb:hover{
+     visibility: visible;  
+ }
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+   /* border: 1px solid #fff; */
+    overflow: hidden;
+    box-shadow: 0px 0px 25px -8px #000000;
+}
+body::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #ffffff;
+    opacity: .5;
+    z-index: -1;
+}
+body::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg transparent #ffffff);
+    z-index: -1;
+}
+header nav{
+    width: 100%;
+    height: 10%;
+  /*  border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+}
+header nav #navCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    margin: auto;
+}
+header nav .navCont #logoPhrase {
+    position: relative;
+    display: block; 
+    margin: none;
+}
+header nav .navCont #logoPhrase #logo {
+    text-align: center;
+    margin: 0px;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #000000;
+}
+header nav .navCont #logoPhrase #phrase {
+    text-align: center;
+    margin: 0px; 
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+}
+header nav .navCont #navSearchPremium {
+    display: flex;
+    width: auto;
+
+}
+header nav .navCont #navSearchPremium #menuBar {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+header nav .navCont #navSearchPremium #menuBar #menu {
+   padding: 3px 15px;
+}
+header nav .navCont #navSearchPremium #menuBar #menu a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #000000;
+    transition: .3s linear;
+}
+header nav .navCont #navSearchPremium #menuBar #menu a:hover {
+    color: #777777;
+}
+header nav #searchProfile {
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav #navSearchPremium #searchProfile .searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px 0px 0px;
+    width: 232px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+}
+header nav #navSearchPremium #searchProfile .searchBar #searchIcon {
+    margin: 0px 5px 0px 5px;
+    width: 15px;
+    height: 15px;
+}
+header nav #navSearchPremium #searchProfile .searchBar #searchInput {
+    outline: none;
+    width: 198px;
+    height: 30px;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none;
+}
+header nav #navSearchPremium #searchProfile .searchBar #searchInput::placeholder {
+    color: #000000;
+    font-size: 12px;
+}
+header nav #navSearchPremium #searchProfile #profileHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 27px;
+    border-radius: 100%;
+}
+header nav #navSearchPremium #searchProfile #profileHolder #profileImage{
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    margin: 0px 5px 0px 0px;
+}
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption{
+    width: 133px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bolder;
+    padding-left: 5px;
+}
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premiumIcon{
+    width: 15px;
+    height: 15px;
+    font-weight: bolder;
+    color: lightblue;
+    margin-right: 5px;
+}
+header nav #navSearchPremium #profileHolder #premiumOption:hover {
+    background: #777777;
+}
+ /*---------------------------------------another--------------------------------------------------------------------*/
+header nav #navSearchPremium #searchProfile .searchBar .search {
+    position: absolute;
+    width: 320px;
+    height: 250px;
+   /* border: 1px solid #fff;*/
+    right: 0px;
+    top: 40px;
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    overflow-Y: auto;
+}
+ header nav #navSearchPremium #searchProfile .searchBar .search::-webkit-scrollbar {
+   background:  rgb(255, 255, 255, .3);
+    width: 5px;
+    border-radius: 5px;
+    visibility: visible;
+    height: 0px;
+    border: 1px solid #fff;
+    right: 0px;
+    top: 40px;
+    z-index: -auto;
+}
+header nav #navSearchPremium #searchProfile .searchBar .search::-webkit-scrollbar-thumb {
+    background:  rgb(255, 255, 255, .3);
+     width: 5px;
+     border-radius: 5px;
+     visibility: hidden;
+     height: 190px;
+     border: 1px solid #fff;
+     right: 0px;
+     top: 40px;
+     z-index: 9999;
+ }
+ header nav #navSearchPremium #searchProfile .searchBar .search:hover::-webkit-scrollbar {
+     visibility: visible;
+ }
+ header nav #navSearchPremium #searchProfile .searchBar .search:hover::-webkit-scrollbar-thumb {
+      visibility: visible;
+  }
+header nav #navSearchPremium #searchProfile .searchBar .search .card {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 5px 0px;
+    padding: 3px 0px;
+   /* border: 1px solid #fff;*/
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 10px;
+}
+header nav #navSearchPremium #searchProfile .searchBar .search .card::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: -1;
+} 
+header nav #navSearchPremium #searchProfile .searchBar .search .card img {
+    width: 28px;
+    height: 90%;
+    background: rgb(255, 255, 255, .1);
+    border-radius: 0%;
+    margin: 0px 8px 0px 8px;
+    z-index: -1;
+} 
+header nav #navSearchPremium #searchProfile .searchBar .search .card .cont {
+   margin-left: 10px;
+} 
+header nav #navSearchPremium #searchProfile .searchBar .search .card .cont h3 {
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+    margin: 0px;
+ } 
+ header nav #navSearchPremium #searchProfile .searchBar .search .card .cont p {
+    font-size: 10px;
+    color: rgb(255, 255, 255, .8);
+    margin: 0px;
+ }
+  header nav #navSearchPremium #searchProfile .searchBar .search .card .cont span {
+    font-size: 10px;
+    color: #000;
+    background-color: yellow;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+ }
+ /*---------------------------------------another--------------------------------------------------------------------*/
+main #darkModeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+}
+main #darkModeSwitch p{
+    font-size: 12px;
+    margin: 0px;
+}
+main #darkModeSwitch #modeSwitchCase {
+    width: 65px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px ;
+}
+main #darkModeSwitch #modeSwitchCase #modeSwithBall {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    margin-left: 8px;
+    background-color: #000000;
+    border: 0px;
+}
+main #noticeDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #noticeDiv #noticeBoard {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 80%;
+    height: auto;
+    padding-top: 10px;
+}
+main #noticeDiv #noticeBoard #noticeContainer{
+    width: 98%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+main #noticeDiv #noticeBoard #cancelNotice{
+    width: 98%;
+    display: flex;
+    justify-content: flex-end;
+}
+main #noticeDiv #noticeBoard #cancelNotice #closeIcon {
+    margin: 0px;
+}
+main #noticeDiv #noticeBoard #noticeContainer #noticeHeader {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+    width: 100%;
+}
+main #noticeDiv #noticeBoard #noticeContainer #note {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0px;
+    width: 100%;
+}
+/*-----------------------------------------------For Ad---------------------------------------------------------------------*/
+main #ad1 {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+main #ad1 #D1 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background: #f2f2f2;
+}
+main #ad1 #D1 p {
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+}
+/*-----------------------------------------------For Ad---------------------------------------------------------------------*/
+main #newMoviesDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #newMoviesDiv #newMovies {
+    width: 70%;
+}
+main #newMoviesDiv #newMovies #newMovieText {
+    font-size: 18px;
+    font-weight: bold;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer {
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 25px -12px #000000;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie {
+    width: 180px;
+    height: 302.13px;
+    margin: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #moviePoster {
+    width: 160px;
+    height: 210px;
+
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description {
+    width: 160px;
+    height: 72.13px;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #title {
+    width: auto;
+    height: auto;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #title p {
+    width: auto;
+    height: px;
+    margin: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating {
+    width: auto;
+    height: 13.13px;
+    display: flex;
+    font-weight: bold;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating p{
+   margin-top: 0px;
+   margin-bottom: 0px;
+   width: auto;
+   font-size: 10px;
+   margin-left: 0px;
+   margin-right:auto;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #imdbicon {
+    background-color: gold;
+    color: black;
+    stroke: 0px;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #rating #rateIcon {
+    color: yellow;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #rating p{
+    margin-left: 0px;
+    margin-right:auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #plot{
+    font-size: 10px;
+    font-weight: 900px;
+    margin-top: 3px;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #plot #morePlot{
+    display: none;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor #moreIcon {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor #moreIcon::before {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor p {
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor:hover{
+   cursor: pointer;
+}
+/*-----------------------------------------------For Ad---------------------------------------------------------------------*/
+main #ad2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad2 #D2 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad2 #D2 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad2 #D2 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad2 #D2 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad2 #D2 #subAd4 {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad2 #D2 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad2 #D2 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad2 #D2 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad2 #D2 #subAd4 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-----------------------------------------------For Ad---------------------------------------------------------------------*/
+main #newAnimeDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #newAnimeDiv #newAnime {
+    width: 70%;
+}
+main #newAnimeDiv #newAnime #newAnimeText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime {
+    width: 180px;
+    height: 302.13px;
+    margin: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #animePoster {
+    width: 160px;
+    height: 210px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description {
+    width: 160px;
+    height: 72.13px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #title {
+    width: auto;
+    height: auto;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #title p {
+    width: auto;
+    height: px;
+    margin: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating {
+    width: auto;
+    height: 13.13px;
+    display: flex;
+    font-weight: bold;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating p{
+   margin-top: 0px;
+   margin-bottom: 0px;
+   width: auto;
+   font-size: 10px;
+   margin-left: 0px;
+   margin-right:auto;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #imdbicon {
+    background-color: gold;
+    color: black;
+    stroke: 0px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #rating #rateIcon {
+    color: yellow;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #rating p{
+    margin-left: 0px;
+    margin-right:auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #plot{
+    font-size: 10px;
+    font-weight: 900px;
+    margin-top: 3px;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #plot #morePlot{
+    display: none;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor #moreIcon {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor #moreIcon::before {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor p {
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor:hover{
+   cursor: pointer;
+}
+/*-------------------------------------------------------------Ad--------------------------------------------------------------*/
+main #ad3 {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+main #ad3 #D3 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+main #ad3 #D3 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    background: #f2f2f2;
+}
+main #ad3 #D3 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    background: #f2f2f2;
+}
+main #ad3 #D3 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    background: #f2f2f2;
+}
+main #ad3 #D3 p {
+    display: flex;
+    align-items: center;
+}
+/*-------------------------------------------------------------Ad--------------------------------------------------------------*/
+main #newCartoonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #newCartoonDiv #newCartoon {
+    width: 70%;
+}
+main #newCartoonDiv #newCartoon #newCartoonText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon {
+    width: 180px;
+    height: 302.13px;
+    margin: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #cartoonPoster {
+    width: 160px;
+    height: 210px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description {
+    width: 160px;
+    height: 72.13px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #title {
+    width: auto;
+    height: auto;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #title p {
+    width: auto;
+    height: px;
+    margin: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating {
+    width: auto;
+    height: 13.13px;
+    display: flex;
+    font-weight: bold;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating p{
+   margin-top: 0px;
+   margin-bottom: 0px;
+   width: auto;
+   font-size: 10px;
+   margin-left: 0px;
+   margin-right:auto;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #imdbicon {
+    background-color: gold;
+    color: black;
+    stroke: 0px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #rating #rateIcon {
+    color: yellow;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #rating p{
+    margin-left: 0px;
+    margin-right:auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #plot{
+    font-size: 10px;
+    font-weight: 900px;
+    margin-top: 3px;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #plot #morePlot{
+    display: none;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor #moreIcon {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor #moreIcon::before {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor p {
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor:hover{
+   cursor: pointer;
+}
+/*-------------------------------------------------------------Ad--------------------------------------------------------------*/
+main #ad4 {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+main #ad4 #D4 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+main #ad4 #D4 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #f2f2f2;
+}
+main #ad4 #D4 p {
+    display: flex;
+    align-items: center;
+}
+/*-------------------------------------------------------------Ad--------------------------------------------------------------*/
+main #newSeriesDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #newSeriesDiv #newSeries {
+    width: 70%;
+}
+main #newSeriesDiv #newSeries #newSeriesText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series {
+    width: 180px;
+    height: 302.13px;
+    margin: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #seriesPoster {
+    width: 160px;
+    height: 210px;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description {
+    width: 160px;
+    height: 72.13px;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #title {
+    width: auto;
+    height: auto;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #title p {
+    width: auto;
+    height: px;
+    margin: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating {
+    width: auto;
+    height: 13.13px;
+    display: flex;
+    font-weight: bold;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating p{
+   margin-top: 0px;
+   margin-bottom: 0px;
+   width: auto;
+   font-size: 10px;
+   margin-left: 0px;
+   margin-right:auto;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #imdbicon {
+    background-color: gold;
+    color: black;
+    stroke: 0px;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #rating #rateIcon {
+    color: yellow;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #rating p{
+    margin-left: 0px;
+    margin-right:auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #plot{
+    font-size: 10px;
+    font-weight: 900px;
+    margin-top: 3px;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #series #description #plot #morePlot{
+    display: none;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor #moreIcon {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newSeriessDiv #newSeries #newSeriesContainer #moreSeries #forCursor #moreIcon::before {
+    display: flex;
+    height: 17.13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor p {
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor:hover{
+   cursor: pointer;
+}
+main #supportContactRequest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 510px;
+    background: #f2f2f2;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+main #supportContactRequest #supportContactRequestHolder {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact {
+    height: 403px;
+    width: 384px;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #support {
+    width: 384px;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #support #supportText {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #support #supportPhrase {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #support #donateButton {
+    width: 115px;
+    height: 50px;
+    border-radius: 5px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #contact {
+    width: 384px;
+    height: auto;
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #contactText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #contactPhrase {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+main #supportContactRequest #supportContactRequestHolder #supportContact #contactButton {
+    width: 115px;
+    height: 50px;
+    border-radius: 5px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+main #supportContactRequest #supportContactRequestHolder #request {
+    height: 403px;
+    width: 384px;
+}
+main #supportContactRequest #supportContactRequestHolder #request #requestText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #supportContactRequest #supportContactRequestHolder #request #requestForm {
+    font-size: 18px;
+    display: block;
+}
+main #supportContactRequest #supportContactRequestHolder #request #requestForm  #nameOfMovie {
+    font-size: 14px;
+    display: block;
+    width: 350px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+main #supportContactRequest #supportContactRequestHolder #request #requestForm  #genreType {
+    font-size: 14px;
+    display: block;
+    width: 350px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+main #supportContactRequest #supportContactRequestHolder #request #requestForm  #dateOfRelease {
+    font-size: 14px;
+    display: block;
+    width: 350px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+main #supportContactRequest #supportContactRequestHolder #request #requestForm  #submitRequest {
+    font-size: 12px;
+    width: 115px;
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight {
+    display: flex;
+    justify-content: center;
+    overscroll-behavior-block: contain;
+    margin: 30px 0px 30px 0px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #disclaimer {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #privacypolicy {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #terms {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #copyright {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #design {
+    
+}

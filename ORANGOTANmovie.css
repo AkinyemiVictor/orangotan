@@ -1,0 +1,1526 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: poppins, Tahoma, Verdana;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: poppins, Tahoma, Verdana;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    background:  #f2f2f2;
+     width: 8px;
+     border-radius: 5px;
+     visibility: visible;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar:hover {
+     visibility: visible;
+ }
+ body::-webkit-scrollbar-thumb {
+    background:  #000000;
+     width: 8px;
+     border-radius: 5px;
+     visibility: visible;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar-thumb:hover{
+     visibility: visible;  
+ }
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+   /* border: 1px solid #fff; */
+    overflow: hidden;
+    box-shadow: 0px 0px 25px -8px #000000;
+}
+body::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #ffffff;
+    opacity: .5;
+    z-index: -1;
+}
+body::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg transparent #ffffff);
+    z-index: -1;
+}
+ header nav{
+    width: 100%;
+    height: 10%;
+  /*  border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+}
+header nav #navCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    margin: auto;
+}
+header nav .navCont #logoPhrase {
+    position: relative;
+    display: block; 
+    margin: none;
+}
+header nav .navCont #logoPhrase #logo {
+    text-align: center;
+    margin: 0px;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #000000;
+}
+header nav .navCont #logoPhrase #phrase {
+    text-align: center;
+    margin: 0px; 
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+}
+header nav .navCont #menuBar {
+    display: flex;
+    align-items: center;
+}
+header nav .navCont #menuBar #menu {
+   padding: 3px 15px;
+}
+header nav .navCont #menuBar #menu a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #000000;
+    transition: .3s linear;
+}
+header nav .navCont #menuBar #menu a:hover {
+    color: #777777;
+}
+header nav #searchProfile {
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav #searchProfile .searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px 0px 0px;
+    width: 232px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+}
+header nav #searchProfile .searchBar #searchIcon {
+    margin: 0px 5px 0px 5px;
+    width: 15px;
+    height: 15px;
+}
+header nav #searchProfile .searchBar #searchInput {
+    outline: none;
+    width: 198px;
+    height: 30px;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none;
+}
+header nav #searchProfile .searchBar #searchInput::placeholder {
+    color: #000000;
+    font-size: 12px;
+}
+header nav #searchProfile #profileHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 27px;
+    border-radius: 100%;
+}
+header nav #searchProfile #profileHolder #profileImage{
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    margin: 0px 5px 0px 0px;
+}
+header nav #searchProfile #profileHolder #premiumOption{
+    width: 133px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bolder;
+    padding-left: 5px;
+}
+header nav #searchProfile #profileHolder #premiumOption #premiumIcon{
+    width: 15px;
+    height: 15px;
+    font-weight: bolder;
+    color: lightblue;
+    margin-right: 5px;
+}
+header nav #profileHolder #premiumOption:hover {
+    background: #777777;
+}
+main #darkModeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+}
+main #darkModeSwitch p{
+    font-size: 12px;
+    margin: 0px;
+}
+main #darkModeSwitch #modeSwitchCase {
+    width: 65px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px ;
+}
+main #darkModeSwitch #modeSwitchCase #modeSwithBall {
+    width: 23px;
+    height: 23px;
+    border-radius: 100px;
+    margin-left: 10px;
+    background-color: #000000;
+}
+main #noticeDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #noticeDiv #noticeBoard {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 80%;
+    height: auto;
+    padding-top: 10px;
+}
+main #noticeDiv #noticeBoard #noticeContainer{
+    width: 98%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+main #noticeDiv #noticeBoard #cancelNotice{
+    width: 98%;
+    display: flex;
+    justify-content: flex-end;
+}
+main #noticeDiv #noticeBoard #cancelNotice #closeIcon {
+    margin: 0px;
+}
+main #noticeDiv #noticeBoard #noticeContainer #noticeHeader {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+    width: 100%;
+}
+main #noticeDiv #noticeBoard #noticeContainer #note {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0px;
+    width: 100%;
+}
+/*------------------------------------------------------------Ad-------------------------------------------------*/
+main #ad5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad5 #D5 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad5 #D5 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad5 #D5 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad5 #D5 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad5 #D5 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad5 #D5 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad5 #D5 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------------------Ad-------------------------------------------------*/
+main #filterDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #filterDiv #filter {
+    width: 70%;
+}
+main #filterDiv #filter #filterTextIcon {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #filterDiv #filter #filterTextIcon #filterIcon {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-left: 6px;
+}
+main #filterDiv #filter #filterContainer {
+    border: 1px solid #ffffff;
+    padding: 26px 30px 26px 30px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+}
+main #filterDiv #filter #filterContainer #categories {
+    margin: 0px 0px 12px 0px;
+}
+main #filterDiv #filter #filterContainer #categories #categoryText {
+    font-size: 18px;
+    font-weight: 500px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+main #filterDiv #filter #filterContainer #categories #categoryContent {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+main #filterDiv #filter #filterContainer #categories #categoryContent #filt {
+    width: auto;
+    padding: 9.5px 9.5px 9.5px 9.5px;
+    font-size: 16px;
+    font-weight: 500px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    margin: 5px 10px 10px 10px;
+}
+main #filterDiv #filter #filterContainer #categories #categoryContent #filt:hover {
+    background: #777777;
+    transition-delay: 150ms;
+    color: #f2f2f2;
+}
+main #filterDiv #filter #filterContainer #genreFilter {
+    margin: 12px 0px 0px 0px;
+}
+main #filterDiv #filter #filterContainer #genreFilter #genreText {
+    font-size: 18px;
+    font-weight: 500px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+main #filterDiv #filter #filterContainer #genreFilter #filterContent {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+main #filterDiv #filter #filterContainer #genreFilter #filterContent {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+main #filterDiv #filter #filterContainer #genreFilter #filterContent #filt {
+    width: auto;
+    padding: 9.5px 9.5px 9.5px 9.5px;
+    font-size: 16px;
+    font-weight: 500px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    margin: 5px 10px 10px 10px;
+}
+main #filterDiv #filter #filterContainer #genreFilter #filterContent #filt:hover {
+background: #777777;
+    transition-delay: 150ms;
+    color: #f2f2f2;
+}
+main #filterDiv #filter #filterContainer #genreFilter #filterContent  {
+
+}
+/*------------------------------------------------------------Ad-------------------------------------------------*/
+main #ad6 {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+main #ad6 #D6 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background: #f2f2f2;
+}
+main #ad6 #D6 p {
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+}
+/*------------------------------------------------------------Ad-------------------------------------------------*/
+main #sortDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #sortDiv #sort {
+    width: 70%;
+}
+main #sortDiv #sort #sortTextIcon {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #sortDiv #sort #sortTextIcon #sortIcon {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-left: 6px;
+}
+main #sortDiv #sort #sortContainer {
+    border: 1px solid #ffffff;
+    padding: 26px 30px 26px 30px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+    
+}
+main #sortDiv #sort #sortContainer #orderText {
+    font-size: 18px;
+    font-weight: 500px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+main #sortDiv #sort #sortContainer #srt {
+    width: auto;
+    padding: 9.5px 9.5px 9.5px 9.5px;
+    font-size: 16px;
+    font-weight: 500px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    margin: 5px 10px 10px 10px;
+}
+main #sortDiv #sort #sortContainer #srt:hover {
+    background: #777777;
+    transition-delay: 150ms;
+    color: #f2f2f2;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad7 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad7 #D7 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad7 #D7 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad7 #D7 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad7 #D7 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad7 #D7 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad7 #D7 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad7 #D7 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #movieListDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+}
+main #movieListDiv #movieList {
+    width: 70%;
+}
+main #movieListDiv #movieList #movieText {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+main #movieListDiv #movieList #movieListContainer {
+    border: 1px solid #ffffff;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 25px -12px #000000;
+    border-radius: 8px;
+    margin-bottom: 0px;
+}
+main #movieListDiv #movieList #movieListContainer #highlightText {
+    font-size: 24px;
+    font-weight: 500px;
+    margin-left: 26px;
+    margin-bottom: 26px;
+    margin-top: 26px;
+    width: 56px;
+    height: 56px;
+    background: #f2f2f2;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+main #movieListDiv #movieList #movieListContainer #movieBullet {
+    display: block;
+    margin: 15px 15px 15px 26px;
+    color: #000000;
+    
+}
+main #movieListDiv #movieList #movieListContainer #movieBullet #movieItem {
+    margin: 0px 0px 0px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight {
+    display: flex;
+    justify-content: center;
+    overscroll-behavior-block: contain;
+    margin: 30px 0px 30px 0px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #disclaimer {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #privacypolicy {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #terms {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #copyright {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}footer #disclaimerPrivacyPolicyTermsCopyRight #design {
+    
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad8 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad8 #D8 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad8 #D8 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad8 #D8 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad8 #D8 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad8 #D8 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad9 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad9 #D9 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad9 #D9 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad9 #D9 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad10 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad10 #D10 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad10 #D10 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad10 #D10 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad10 #D10 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad10 #D10 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad10 #D10 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad10 #D10 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad11 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad11 #D11 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad11 #D11 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad11 #D11 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad11 #D11 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad11 #D11 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad12 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad12 #D12 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad12 #D12 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad12 #D12 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad13 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad13 #D13 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad13 #D13 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad13 #D13 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad13 #D13 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad13 #D13 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad13 #D13 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad13 #D13 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad14 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad14 #D14 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad14 #D14 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad14 #D14 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad14 #D14 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad14 #D14 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad15 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad15 #D15 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad15 #D15 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad15 #D15 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad16 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad16 #D16 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad16 #D16 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad16 #D16 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad16 #D16 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad16 #D16 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad16 #D16 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad16 #D16 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad17 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad17 #D17 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad17 #D17 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad17 #D17 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad17 #D17 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad17 #D17 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad18 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad18 #D18 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad18 #D18 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad18 #D18 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad19 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad19 #D19 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad19 #D19 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad19 #D19 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad19 #D19 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad19 #D19 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad19 #D19 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad19 #D19 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad20 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad20 #D20 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad20 #D20 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad20 #D20 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad20 #D20 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad20 #D20 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad21 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad21 #D21 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad21 #D21 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad21 #D21 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad22 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad22 #D22 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad22 #D22 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad22 #D22 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad22 #D22 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad22 #D22 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad22 #D22 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad22 #D22 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad23 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad23 #D23 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad23 #D23 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad23 #D23 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad23 #D23 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad23 #D23 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad24 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad24 #D24 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad24 #D24 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad24 #D24 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad25 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad25 #D25 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad25 #D25 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad25 #D25 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad25 #D25 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad25 #D25 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad25 #D25 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad25 #D25 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad26 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad26 #D26 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad26 #D26 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad26 #D26 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad26 #D26 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad26 #D26 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad27 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad27 #D27 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad27 #D27 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad27 #D27 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad28 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad28 #D28 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad28 #D28 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad28 #D28 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad28 #D28 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad28 #D28 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad28 #D28 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad28 #D28 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad29 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad29 #D29 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad29 #D29 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad29 #D29 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad29 #D29 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad29 #D29 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad30 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad30 #D30 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad30 #D30 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad30 #D30 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad31 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad31 #D31 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad31 #D31 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad31 #D31 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad31 #D31 #subAd3 {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad31 #D31 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad31 #D31 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad31 #D31 #subAd3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/
+/*------------------------------------------------Ad-----------------------------------------------*/
+main #ad32 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+main #ad32 #D32 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main #ad32 #D32 #subAd1 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad32 #D32 #subAd2 {
+    display: flex;
+    justify-content: center;
+    width: 660px;
+    height: 160px;
+    background: #f2f2f2;
+}
+main #ad32 #D32 #subAd1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #ad32 #D32 #subAd2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------------------------------Ad-----------------------------------------------*/

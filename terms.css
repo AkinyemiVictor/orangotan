@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: poppins, Tahoma, Verdana;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: poppins, Tahoma, Verdana;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    background:  #f2f2f2;
+     width: 8px;
+     border-radius: 5px;
+     visibility: hidden;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar:hover {
+     visibility: visible;
+ }
+ body::-webkit-scrollbar-thumb {
+    background:  #000000;
+     width: 8px;
+     border-radius: 5px;
+     visibility: hidden;
+     height: 0px;
+     border: 1px solid #000;
+     right: 0px;
+     top: 100px;
+     z-index: auto;
+ }
+ body::-webkit-scrollbar-thumb:hover{
+     visibility: visible;  
+ }
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+   /* border: 1px solid #fff; */
+    overflow: hidden;
+    box-shadow: 0px 0px 25px -8px #000000;
+}
+body::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #ffffff;
+    opacity: .5;
+    z-index: -1;
+}
+body::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg transparent #ffffff);
+    z-index: -1;
+}
+ header nav{
+    width: 100%;
+    height: 10%;
+  /*  border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+}
+header nav #navCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    margin: auto;
+}
+header nav .navCont #logoPhrase {
+    position: relative;
+    display: block; 
+    margin: none;
+}
+header nav .navCont #logoPhrase #logo {
+    text-align: center;
+    margin: 0px;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #000000;
+}
+header nav .navCont #logoPhrase #phrase {
+    text-align: center;
+    margin: 0px; 
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+}
+header nav .navCont #menuBar {
+    display: flex;
+    align-items: center;
+}
+header nav .navCont #menuBar #menu {
+   padding: 3px 15px;
+}
+header nav .navCont #menuBar #menu a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #000000;
+    transition: .3s linear;
+}
+header nav .navCont #menuBar #menu a:hover {
+    color: #777777;
+}
+header nav #searchProfile {
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav #searchProfile .searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px 0px 0px;
+    width: 232px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+}
+header nav #searchProfile .searchBar #searchIcon {
+    margin: 0px 5px 0px 5px;
+    width: 15px;
+    height: 15px;
+}
+header nav #searchProfile .searchBar #searchInput {
+    outline: none;
+    width: 198px;
+    height: 30px;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none;
+}
+header nav #searchProfile .searchBar #searchInput::placeholder {
+    color: #000000;
+    font-size: 12px;
+}
+header nav #searchProfile #profileHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 27px;
+    border-radius: 100%;
+}
+header nav #searchProfile #profileHolder #profileImage{
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    margin: 0px 5px 0px 0px;
+}
+header nav #searchProfile #profileHolder #premiumOption{
+    width: 133px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bolder;
+    padding-left: 5px;
+}
+header nav #searchProfile #profileHolder #premiumOption #premiumIcon{
+    width: 15px;
+    height: 15px;
+    font-weight: bolder;
+    color: lightblue;
+    margin-right: 5px;
+}
+header nav #profileHolder #premiumOption:hover {
+    background: #777777;
+}
+main #termsSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #termsSection #extraDiv {
+    width: 70%;
+    height: auto;
+}
+main #termsSection #extraDiv h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 60px;
+}
+main #termsSection #extraDiv #termsFlex {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 45px;
+}
+main #termsSection #extraDiv #termsFlex #terms {
+    width: 80%;
+    height: auto;
+    background-color:#f2f2f2; 
+    box-shadow: 0px 0px 25px -8px #000000;
+    padding: 30px 60px 30px 60px;
+}
+main #termsSection #extraDiv #termsFlex #terms #t {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+main #termsSection #extraDiv #termsFlex #terms #txt {
+    font-size: 14px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight {
+    display: flex;
+    justify-content: center;
+    overscroll-behavior-block: contain;
+    margin: 30px 0px 30px 0px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #disclaimer {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #privacypolicy {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #terms {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer #disclaimerPrivacyPolicyTermsCopyRight #copyright {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}footer #disclaimerPrivacyPolicyTermsCopyRight #design {
+    
+}
