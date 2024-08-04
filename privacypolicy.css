@@ -15,59 +15,34 @@ body::-webkit-scrollbar {
     background:  #f2f2f2;
      width: 8px;
      border-radius: 5px;
-     visibility: hidden;
+     visibility: visible;
      height: 0px;
      border: 1px solid #000;
      right: 0px;
      top: 100px;
      z-index: auto;
- }
- body::-webkit-scrollbar:hover {
-     visibility: visible;
  }
  body::-webkit-scrollbar-thumb {
     background:  #000000;
      width: 8px;
      border-radius: 5px;
-     visibility: hidden;
+     visibility: visible;
      height: 0px;
      border: 1px solid #000;
      right: 0px;
      top: 100px;
      z-index: auto;
  }
- body::-webkit-scrollbar-thumb:hover{
-     visibility: visible;  
- }
 header {
     position: relative;
     width: 100%;
     height: 100px;
-   /* border: 1px solid #fff; */
     overflow: hidden;
     box-shadow: 0px 0px 25px -8px #000000;
-}
-body::before {
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    background: #ffffff;
-    opacity: .5;
-    z-index: -1;
-}
-body::after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    background: linear-gradient(90deg transparent #ffffff);
-    z-index: -1;
 }
  header nav{
     width: 100%;
     height: 10%;
-  /*  border: 1px solid #fff; */
     display: flex;
     align-items: center;
 }
@@ -98,31 +73,36 @@ header nav .navCont #logoPhrase #phrase {
     font-size: 15px;
     font-weight: 400;
 }
-header nav .navCont #menuBar {
+header nav .navCont #navSearchPremium {
+    display: flex;
+    width: auto;
+}
+header nav .navCont #navSearchPremium #menuBar {
     display: flex;
     align-items: center;
+    margin-right: 80px;
 }
-header nav .navCont #menuBar #menu {
+header nav .navCont #navSearchPremium #menuBar #menu {
    padding: 3px 15px;
 }
-header nav .navCont #menuBar #menu a {
+header nav .navCont #navSearchPremium #menuBar #menu a {
     text-decoration: none;
     font-size: 12px;
     font-weight: bolder;
     color: #000000;
     transition: .3s linear;
 }
-header nav .navCont #menuBar #menu a:hover {
+header nav .navCont #navSearchPremium #menuBar #menu a:hover {
     color: #777777;
 }
-header nav #searchProfile {
+header nav #navSearchPremium #searchProfile {
     width: auto;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header nav #searchProfile .searchBar {
+header nav #navSearchPremium #searchProfile .searchBar {
     position: relative;
     display: flex;
     align-items: center;
@@ -133,12 +113,12 @@ header nav #searchProfile .searchBar {
     background-color: #f2f2f2;
     border-radius: 25px;
 }
-header nav #searchProfile .searchBar #searchIcon {
+header nav #navSearchPremium #searchProfile .searchBar #searchIcon {
     margin: 0px 5px 0px 5px;
     width: 15px;
     height: 15px;
 }
-header nav #searchProfile .searchBar #searchInput {
+header nav #navSearchPremium #searchProfile .searchBar #searchInput {
     outline: none;
     width: 198px;
     height: 30px;
@@ -146,11 +126,11 @@ header nav #searchProfile .searchBar #searchInput {
     padding: 5px 10px;
     border: none;
 }
-header nav #searchProfile .searchBar #searchInput::placeholder {
+header nav #navSearchPremium #searchProfile .searchBar #searchInput::placeholder {
     color: #000000;
     font-size: 12px;
 }
-header nav #searchProfile #profileHolder {
+header nav #navSearchPremium #searchProfile #profileHolder {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,13 +138,13 @@ header nav #searchProfile #profileHolder {
     height: 27px;
     border-radius: 100%;
 }
-header nav #searchProfile #profileHolder #profileImage{
+header nav #navSearchPremium #searchProfile #profileHolder #profileImage{
     height: 23px;
     width: 23px;
     border-radius: 100%;
     margin: 0px 5px 0px 0px;
 }
-header nav #searchProfile #profileHolder #premiumOption{
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption{
     width: 133px;
     height: 24px;
     border-radius: 4px;
@@ -172,15 +152,42 @@ header nav #searchProfile #profileHolder #premiumOption{
     font-weight: bolder;
     padding-left: 5px;
 }
-header nav #searchProfile #profileHolder #premiumOption #premiumIcon{
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premiumIcon{
     width: 15px;
     height: 15px;
     font-weight: bolder;
     color: lightblue;
     margin-right: 5px;
 }
-header nav #profileHolder #premiumOption:hover {
+header nav #navSearchPremium #profileHolder #premiumOption:hover {
     background: #777777;
+}
+main #darkModeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+}
+main #darkModeSwitch p{
+    font-size: 12px;
+    margin: 0px;
+}
+main #darkModeSwitch #modeSwitchCase {
+    width: 65px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px ;
+}
+main #darkModeSwitch #modeSwitchCase #modeSwithBall {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    margin-left: 8px;
+    background-color: #000000;
+    border: 0px;
 }
 main #privacySection {
     width: 100%;

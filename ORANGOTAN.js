@@ -30,9 +30,10 @@ function navMovies(){
 
 }
 
-function navAnime()[
+function navAnime(){
 
-]
+}
+
 
 function navCartoons(){
 
@@ -44,7 +45,10 @@ function navSeries(){
 
 function modeSwitcher(){
     let body = document.getElementById('body');
+    
     body.style.backgroundColor = "#000000";
+    body.style.opacity = 1;
+    body.style.color = "#ffffff";
 
 }
 
