@@ -72,3 +72,8 @@ function closeMenu() {
     hamburger.classList.remove("active");
     menuBar.classList.remove("active");
 }
+const contactContactRequest = document.getElementById('supportContactRequestHolder').addEventListener ("click", widthajust);
+
+function widthajust () {
+    document.style.display = "block";
+}
