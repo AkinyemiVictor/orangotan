@@ -1,49 +1,49 @@
-document.getElementById('home');
-document.getElementById('movies');
-document.getElementById('animes');
-document.getElementById('cartoons');
-document.getElementById('serie');
-document.getElementById('searchInput');
+const home = document.getElementById('home');
+const movies = document.getElementById('movies');
+const animes = document.getElementById('animes');
+const cartoons = document.getElementById('cartoons');
+const serie = document.getElementById('serie');
+const searchInput = document.getElementById('searchInput');
 //document.addEventListener('searchInput');
-document.getElementById('profileHolder');
-document.getElementById('premiumOption');
+const profileHolder = document.getElementById('profileHolder');
+const premiumOption = document.getElementById('premiumOption');
 //.addEventListener('premiumoption');
-document.getElementById('modeSwitchBall');
+const modeSwitchBall = document.getElementById('modeSwitchBall');
 //document.addEventListener('modeSwitchBall');
-document.getElementById('closeIcon');
+const closeIcon = document.getElementById('closeIcon');
 //document.addEventListener('closeIcon');
-document.getElementById('forCursor');
+const forCursor = document.getElementById('forCursor');
 //document.addEventListener('forCursor');
-document.getElementById('donateButton');
+const donateButton = document.getElementById('donateButton');
 //document.addEventListener('donateButtons');
-document.getElementById('contactButton');
+const contactButton = document.getElementById('contactButton');
 //.addEventListener('contactButton');
-document.getElementById('submitRequest');
+const submitRequest = document.getElementById('submitRequest');
 //document.addEventListener('submitRequest');
 
-function navHome(){
+const navHome =() => {
     let home = documet.getElementById('home');
     home
 }
 
-function navMovies(){
+const navMovies = () => {
 
 }
 
-function navAnime(){
+const navAnime = () => {
 
 }
 
 
-function navCartoons(){
+const navCartoons = () => {
 
 }
 
-function navSeries(){
+const navSeries = () =>{
 
 }
 
-function modeSwitcher(){
+const modeSwitcher = () => {
     let body = document.getElementById('body');
     
     body.style.backgroundColor = "#000000";
@@ -53,3 +53,22 @@ function modeSwitcher(){
 }
 
 
+const hamburger = document.querySelector("#hamburgerMenu");
+const menuBar = document.querySelector("#menuBar");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    menuBar.classList.toggle("active");
+}
+
+
+const menu = document.querySelectorAll("#menu");
+
+menu.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    menuBar.classList.remove("active");
+}
