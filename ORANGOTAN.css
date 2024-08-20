@@ -2,6 +2,26 @@
 * {
     font-family: poppins, Tahoma, Verdana;
 }
+:root {
+    --background-color: rgb(255,255,255);
+    --paragraph-color: rgb(0, 0, 0);
+    --section-background: rgb(242, 242, 242);
+    --alt-color: rgb(119, 119, 119);
+    --shadow-style: 0px 0px 25px -8px #000000;
+    --imdb-icon:  rgb(255, 215, 0);
+    --star-rating: rgb(255, 255, 0);
+    --premium-icon: rgb(173, 216,230);
+}
+[ theme = "dark"] {
+    --background-color: rgb(18,18,18);
+    --paragraph-color: rgb(242, 242, 242);
+    --section-background: rgb(0, 0, 0);
+    --alt-color: rgb(119, 119, 119);
+    --shadow-style: 0px 0px 25px -8px #000000;
+    --imdb-icon:  rgb(255, 215, 0);
+    --star-rating: rgb(255, 255, 0);
+    --premium-icon: rgb(173, 216,230);
+}
 body {
     width: 100%;
     height: auto;
@@ -977,7 +997,7 @@ main #supportContactRequest #supportContactRequestHolder #request #requestText {
     margin-top: 0px;
 }
 main #supportContactRequest #supportContactRequestHolder #request #requestForm {
-    font-size: 18px;
+    font-size: 14px;
     display: block;
 }
 main #supportContactRequest #supportContactRequestHolder #request #requestForm  #nameOfMovie {
@@ -1076,7 +1096,6 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
     header nav .navCont #navSearchPremium #menuBar {
         margin-right: 0px;
     }
-
 }
 @media all and (max-width: 1260px){
     header nav #navSearchPremium #searchProfile .searchBar {
