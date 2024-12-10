@@ -1,43 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
-    font-family: poppins, Tahoma, Verdana;
-}
+
 :root {
     --background-color: rgb(255,255,255);
     --paragraph-color: rgb(0, 0, 0);
     --section-background: rgb(242, 242, 242);
     --alt-color: rgb(119, 119, 119);
-    --shadow-style: 0px 0px 25px -8px #000000;
+    --shadow-style: 0px 0px 25px -8px rgb(0, 0, 0);
     --imdb-icon:  rgb(255, 215, 0);
     --star-rating: rgb(255, 255, 0);
-    --premium-icon: rgb(173, 216,230);
+    --premium-icon: rgb(0, 191, 255);
+    --srollbar-border: 1px solid rgb(0, 0, 0);
+    --placeholder-color: rgb(51, 51, 51);
 }
-[ theme = "dark"] {
-    --background-color: rgb(18,18,18);
-    --paragraph-color: rgb(242, 242, 242);
-    --section-background: rgb(0, 0, 0);
+[theme = "dark"] {
+    --background-color: rgb(18, 18, 18);
+    --paragraph-color: rgb(255, 255, 255);
+    --section-background: rgb(13, 9, 7);
     --alt-color: rgb(119, 119, 119);
-    --shadow-style: 0px 0px 25px -8px #000000;
+    --shadow-style: 0px 0px 25px -8px rgb(0, 0, 0);
     --imdb-icon:  rgb(255, 215, 0);
     --star-rating: rgb(255, 255, 0);
-    --premium-icon: rgb(173, 216,230);
+    --premium-icon: rgb(0, 191, 255);
+    --srollbar-border: 1px solid rgb(255, 255, 255);
+    --placeholder-color: rgb(51, 51, 51);
 }
-body {
+[theme="dark"] main #darkModeSwitch #modeSwitchCase #modeSwitchBall {
+    left: 25px;
+}
+* {
+    font-family: poppins, Tahoma, Verdana;
+}
+#body {
     width: 100%;
     height: auto;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     font-family: poppins, Tahoma, Verdana;
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
 }
 body::-webkit-scrollbar {
-    background:  #f2f2f2;
+    background:  var(--background-color);
     width: 8px;
     border-radius: 5px;
     visibility: visible;
     height: 100px;
-    border: 1px solid #000;
+    border: var(--paragraph-color);
     right: 0px;
     top: 100px;
     z-index: auto;
@@ -48,7 +56,7 @@ body::-webkit-scrollbar {
     border-radius: 5px;
     visibility: visible;
     height: 0px;
-    border: 1px solid #000;
+    border: var(--section-background);
     right: 0px;
     top: 100px;
     z-index: auto;
@@ -58,7 +66,7 @@ header {
     width: auto;
     height: auto; 
     overflow: hidden;
-    box-shadow: 0px 0px 25px -8px #000000;
+    box-shadow: var(--shadow-style);
 }
 header nav{
     width: 100%;
@@ -84,12 +92,12 @@ header nav .navCont #logoPhrase #logo {
     margin: 0px;
     font-weight: bolder;
     font-size: 25px;
-    color: #000000;
+    color: var(--paragraph-color);
 }
 header nav .navCont #logoPhrase #phrase {
     text-align: center;
     margin: 0px; 
-    color: #000000;
+    color: var(--paragraph-color);
     font-size: 15px;
     font-weight: 400;
 }
@@ -109,7 +117,7 @@ header nav .navCont #navSearchPremium #menuBar #menu a {
     text-decoration: none;
     font-size: 12px;
     font-weight: bolder;
-    color: #000000;
+    color: var(--paragraph-color);
     transition: .3s linear;
 }
 header nav .navCont #navSearchPremium #menuBar #menu a:hover {
@@ -130,7 +138,7 @@ header nav #navSearchPremium #searchProfile .searchBar {
     margin: 0px 20px 0px 0px;
     width: 232px;
     height: 30px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 25px;
 }
 header nav #navSearchPremium #searchProfile .searchBar #searchIcon {
@@ -147,7 +155,7 @@ header nav #navSearchPremium #searchProfile .searchBar #searchInput {
     border: none;
 }
 header nav #navSearchPremium #searchProfile .searchBar #searchInput::placeholder {
-    color: #333333;
+    color: var(--placeholder-color);
     font-size: 12px;
 }
 header nav #navSearchPremium #searchProfile #profileHolder {
@@ -158,29 +166,36 @@ header nav #navSearchPremium #searchProfile #profileHolder {
     height: 27px;
     border-radius: 100%;
 }
-header nav #navSearchPremium #searchProfile #profileHolder #profileImage{
+header nav #navSearchPremium #searchProfile #profileHolder #profileImage {
     height: 23px;
     width: 23px;
     border-radius: 100%;
     margin: 0px 5px 0px 0px;
 }
-header nav #navSearchPremium #searchProfile #profileHolder #premiumOption{
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption {
+    display: flex;
     width: 133px;
     height: 24px;
     border-radius: 4px;
     border: none;
     font-weight: bolder;
     padding-left: 5px;
+    background: var(--section-background);
+    color: var(--paragraph-color);
 }
-header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premiumIcon{
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premiumIcon {
     width: 15px;
     height: 15px;
     font-weight: bolder;
-    color: lightblue;
+    color: var(--premium-icon);
     margin-right: 5px;
 }
-header nav #navSearchPremium #profileHolder #premiumOption:hover {
-    background: #777777;
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption p {
+    color: var()
+}
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption:hover {
+    background: var(--alt-color);
+    color: var(--shadow-style);
 }
 main #darkModeSwitch {
     display: flex;
@@ -191,23 +206,28 @@ main #darkModeSwitch {
 main #darkModeSwitch p{
     font-size: 12px;
     margin: 0px;
+    color: var(--paragraph-color);
 }
 main #darkModeSwitch #modeSwitchCase {
     width: 65px;
     height: 30px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 100px;
     display: flex;
     align-items: center;
-    margin-left: 10px ;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
 }
-main #darkModeSwitch #modeSwitchCase #modeSwithBall {
+main #darkModeSwitch #modeSwitchCase #modeSwitchBall {
     width: 25px;
     height: 25px;
     border-radius: 100px;
     margin-left: 8px;
-    background-color: #000000;
+    background-color: var(--paragraph-color);
     border: 0px;
+    position: absolute;
+    transition: left 0.3s;
 }
 main #noticeDiv {
     width: 100%;
@@ -217,7 +237,7 @@ main #noticeDiv {
     justify-content: center;
 }
 main #noticeDiv #noticeBoard {
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 8px;
     width: 80%;
     height: auto;
@@ -236,18 +256,24 @@ main #noticeDiv #noticeBoard #cancelNotice{
 }
 main #noticeDiv #noticeBoard #cancelNotice #closeIcon {
     margin: 0px;
+    color: var(--paragraph-color)
+}
+main #noticeDiv #noticeBoard #cancelNotice #closeIcon:hover {
+    cursor: pointer;
 }
 main #noticeDiv #noticeBoard #noticeContainer #noticeHeader {
     font-size: 16px;
     font-weight: bold;
     margin: 0px;
     width: 100%;
+    color: var(--paragraph-color);
 }
 main #noticeDiv #noticeBoard #noticeContainer #note {
     font-size: 14px;
     text-align: justify;
     margin: 0px;
     width: 100%;
+    color: var(--paragraph-color)
 }
 /*-----------------------------------------------For Ad---------------------------------------------------------------------*/
 main #ad1 {
@@ -261,12 +287,12 @@ main #ad1 #D1 {
     width: 80%;
     display: flex;
     justify-content: center;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad1 #D1 p {
     display: flex;
     align-items: center;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 /*-----------------------------------------------For Ad---------------------------------------------------------------------*/
 main #newMoviesDiv {
@@ -281,6 +307,7 @@ main #newMoviesDiv #newMovies {
 main #newMoviesDiv #newMovies #newMovieText {
     font-size: 18px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newMoviesDiv #newMovies #newMoviesContainer {
     border: none;
@@ -290,13 +317,20 @@ main #newMoviesDiv #newMovies #newMoviesContainer {
     padding: 20px;
     justify-content: center;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 25px -12px #000000;
+    box-shadow: var(--shadow-style);
+}
+main #newMoviesDiv #newMovies #newMoviesContainer a {
+    text-decoration: none;
+    color: var(--paragraph-color);
+}
+main #newMoviesDiv #newMovies #newMoviesContainer a:hover {
+    cursor: pointer;
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #movie {
     width: 180px;
     height: 302.13px;
     margin: 15px 15px 15px 15px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -339,12 +373,12 @@ main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRati
    margin-right:auto;
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #imdbicon {
-    background-color: gold;
+    background-color: var(--imdb-icon);
     color: black;
     stroke: 0px;
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #rating #rateIcon {
-    color: yellow;
+    color: var(--star-rating);
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #movie #description #genreRating #rating {
     display: flex;
@@ -380,6 +414,7 @@ main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor {
     justify-content: center;
     align-items: center;
     border: 0px;
+    background-color: var(--background-color);
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor #moreIcon {
     display: flex;
@@ -387,6 +422,7 @@ main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor #moreIc
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor p {
     margin-left: 0px;
@@ -395,6 +431,7 @@ main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor p {
     margin-bottom: 0px;
     font-size: 12px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newMoviesDiv #newMovies #newMoviesContainer #moreMovies #forCursor:hover{
    cursor: pointer;
@@ -416,28 +453,28 @@ main #ad2 #D2 #subAd1 {
     justify-content: center;
     width: 320px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad2 #D2 #subAd2 {
     display: flex;
     justify-content: center;
     width: 320px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad2 #D2 #subAd3 {
     display: flex;
     justify-content: center;
     width: 320px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad2 #D2 #subAd4 {
     display: flex;
     justify-content: center;
     width: 320px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad2 #D2 #subAd1 p {
     display: flex;
@@ -473,22 +510,30 @@ main #newAnimeDiv #newAnime #newAnimeText {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #newAnimeDiv #newAnime #newAnimeContainer {
     border: none;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 25px -12px #000000;
+    box-shadow: var(--shadow-style);
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     justify-content: center;
 }
+main #newAnimeDiv #newAnime #newAnimeContainer a {
+    text-decoration: none;
+    color: var(--paragraph-color);
+}
+main #newAnimeDiv #newAnime #newAnimeContainer a:hover {
+    cursor: pointer;
+}
 main #newAnimeDiv #newAnime #newAnimeContainer #anime {
     width: 180px;
     height: 302.13px;
     margin: 15px 15px 15px 15px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -530,12 +575,12 @@ main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating 
    margin-right:auto;
 }
 main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #imdbicon {
-    background-color: gold;
-    color: black;
+    background-color: var(--imdb-icon);
+    color: #000000;
     stroke: 0px;
 }
 main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #rating #rateIcon {
-    color: yellow;
+    color: var(--star-rating);
 }
 main #newAnimeDiv #newAnime #newAnimeContainer #anime #description #genreRating #rating {
     display: flex;
@@ -571,6 +616,7 @@ main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor {
     justify-content: center;
     align-items: center;
     border: 0px;
+    background-color: var(--background-color);
 }
 main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor #moreIcon {
     display: flex;
@@ -578,6 +624,7 @@ main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor #moreIcon {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor p {
     margin-left: 0px;
@@ -586,6 +633,7 @@ main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor p {
     margin-bottom: 0px;
     font-size: 12px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newAnimeDiv #newAnime #newAnimeContainer #moreAnime #forCursor:hover{
    cursor: pointer;
@@ -608,19 +656,19 @@ main #ad3 #D3 #subAd1 {
     display: flex;
     justify-content: center;
     width: 400px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad3 #D3 #subAd2 {
     display: flex;
     justify-content: center;
     width: 400px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad3 #D3 #subAd3 {
     display: flex;
     justify-content: center;
     width: 400px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad3 #D3 p {
     display: flex;
@@ -640,22 +688,30 @@ main #newCartoonDiv #newCartoon #newCartoonText {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer {
     border: none;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 25px -12px #000000;
+    box-shadow: var(--shadow-style);
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     justify-content: center;
 }
+main #newCartoonDiv #newCartoon #newCartoonContainer a {
+    text-decoration: none;
+    color: var(--paragraph-color);
+}
+main #newCartoonDiv #newCartoon #newCartoonContainer a:hover {
+    cursor: pointer;
+}
 main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon {
     width: 180px;
     height: 302.13px;
     margin: 15px 15px 15px 15px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -697,12 +753,12 @@ main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genr
    margin-right:auto;
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #imdbicon {
-    background-color: gold;
-    color: black;
+    background-color: var(--imdb-icon);
+    color: #000000;
     stroke: 0px;
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #rating #rateIcon {
-    color: yellow;
+    color: var(--star-rating);
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer #cartoon #description #genreRating #rating {
     display: flex;
@@ -738,6 +794,7 @@ main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor {
     justify-content: center;
     align-items: center;
     border: 0px;
+    background-color: var(--background-color);
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor #moreIcon {
     display: flex;
@@ -745,6 +802,7 @@ main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor #mo
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor p {
     margin-left: 0px;
@@ -753,6 +811,7 @@ main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor p {
     margin-bottom: 0px;
     font-size: 12px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newCartoonDiv #newCartoon #newCartoonContainer #moreCartoon #forCursor:hover{
    cursor: pointer;
@@ -775,7 +834,7 @@ main #ad4 #D4 #subAd1 {
     display: flex;
     justify-content: center;
     width: 100%;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad4 #D4 p {
     display: flex;
@@ -795,22 +854,30 @@ main #newSeriesDiv #newSeries #newSeriesText {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #newSeriesDiv #newSeries #newSeriesContainer {
     border: none;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 25px -12px #000000;
+    box-shadow: var(--shadow-style);
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     justify-content: center;
 }
+main #newSeriesDiv #newSeries #newSeriesContainer a {
+    text-decoration: none;
+    color: var(--paragraph-color);
+}
+main #newSeriesDiv #newSeries #newSeriesContainer a:hover {
+    cursor: pointer;
+}
 main #newSeriesDiv #newSeries #newSeriesContainer #series {
     width: 180px;
     height: 302.13px;
     margin: 15px 15px 15px 15px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -852,12 +919,12 @@ main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRat
    margin-right:auto;
 }
 main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #imdbicon {
-    background-color: gold;
-    color: black;
+    background-color: var(--imdb-icon);
+    color: #000000;
     stroke: 0px;
 }
 main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #rating #rateIcon {
-    color: yellow;
+    color: var(--star-rating);
 }
 main #newSeriesDiv #newSeries #newSeriesContainer #series #description #genreRating #rating {
     display: flex;
@@ -894,6 +961,7 @@ main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor {
     justify-content: center;
     align-items: center;
     border: 0px;
+    background-color: var(--background-color);
 }
 main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor #moreIcon {
     display: flex;
@@ -901,6 +969,7 @@ main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor #moreIc
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor p {
     margin-left: 0px;
@@ -909,6 +978,7 @@ main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor p {
     margin-bottom: 0px;
     font-size: 12px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #newSeriesDiv #newSeries #newSeriesContainer #moreSeries #forCursor:hover{
    cursor: pointer;
@@ -919,7 +989,7 @@ main #supportContactRequest {
     align-items: center;
     width: 100%;
     height: 510px;
-    background: #f2f2f2;
+    background: var(--section-background);
     margin-top: 30px;
     margin-bottom: 0px;
 }
@@ -946,20 +1016,23 @@ main #supportContactRequest #supportContactRequestHolder #supportContact #suppor
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #supportContactRequest #supportContactRequestHolder #supportContact #support #supportPhrase {
     font-size: 18px;
     margin-top: 0px;
     margin-bottom: 20px;
+    color: var(--paragraph-color);
 }
 main #supportContactRequest #supportContactRequestHolder #supportContact #support #donateButton {
     width: 115px;
     height: 50px;
     border-radius: 5px;
-    background: #000000;
-    color: #ffffff;
+    background: var(--paragraph-color);
+    color: var(--pharagraph-color);
     font-size: 12px;
     font-weight: bold;
+
 }
 main #supportContactRequest #supportContactRequestHolder #supportContact #contact {
     width: 384px;
@@ -972,18 +1045,20 @@ main #supportContactRequest #supportContactRequestHolder #supportContact #contac
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: var(--paragraph-color);
 }
 main #supportContactRequest #supportContactRequestHolder #supportContact #contactPhrase {
     font-size: 18px;
     margin-top: 0px;
     margin-bottom: 20px;
+    color: var(--paragraph-color);
 }
 main #supportContactRequest #supportContactRequestHolder #supportContact #contactButton {
     width: 115px;
     height: 50px;
     border-radius: 5px;
-    background: #000000;
-    color: #ffffff;
+    background: var(--paragraph-color);
+    color: var(--background-color);
     font-size: 12px;
     font-weight: bold;
 }
@@ -995,6 +1070,7 @@ main #supportContactRequest #supportContactRequestHolder #request #requestText {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #supportContactRequest #supportContactRequestHolder #request #requestForm {
     font-size: 14px;
@@ -1007,9 +1083,10 @@ main #supportContactRequest #supportContactRequestHolder #request #requestForm  
     height: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     border: none;
     outline: none;
+    padding: 0px 5px;
 }
 main #supportContactRequest #supportContactRequestHolder #request #requestForm  #genreType {
     font-size: 14px;
@@ -1018,9 +1095,10 @@ main #supportContactRequest #supportContactRequestHolder #request #requestForm  
     height: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     border: none;
     outline: none;
+    padding: 0px 5px;
 }
 main #supportContactRequest #supportContactRequestHolder #request #requestForm  #dateOfRelease {
     font-size: 14px;
@@ -1030,6 +1108,10 @@ main #supportContactRequest #supportContactRequestHolder #request #requestForm  
     margin-top: 10px;
     margin-bottom: 10px;
     outline: none;
+    background-color: var(--background-color);
+    border: none;
+    color: var(--paragraph-color);
+    padding: 0px 5px;
 }
 main #supportContactRequest #supportContactRequestHolder #request #requestForm  #submitRequest {
     font-size: 12px;
@@ -1037,8 +1119,8 @@ main #supportContactRequest #supportContactRequestHolder #request #requestForm  
     height: 50px;
     outline: none;
     border-radius: 5px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--paragraph-color);
+    color: var(--background-color);
     font-weight: bold;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight {
@@ -1049,28 +1131,28 @@ footer #disclaimerPrivacyPolicyTermsCopyRight {
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #disclaimer {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #privacypolicy {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #terms {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #copyright {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
@@ -1085,7 +1167,7 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
     display: hidden;
     width: 30px;
     height: 3px;
-    background-color: #000;
+    background-color: var(--paragraph-color);
     border-radius: 8px;
     margin: 5px 10px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1127,7 +1209,7 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         right: -100%; 
         top: 8.5rem;
         flex-direction: column;
-        background: #f2f2f2;
+        background: var(--section-background);
         width: 50%;
         border-radius: 10px;
         transition: 0.3s;
@@ -1162,12 +1244,12 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         margin: 0px;
         font-weight: bolder;
         font-size: 20px;
-        color: #000000;
+        color: var(--paragraph-color);
     }
     header nav .navCont #logoPhrase #phrase {
         text-align: center;
         margin: 0px; 
-        color: #000000;
+        color: var(--paragraph-color);
         font-size: 10px;
         font-weight: 400;
     }
@@ -1178,11 +1260,11 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
          text-decoration: none;
          font-size: 12px;
          font-weight: bolder;
-         color: #000000;
+         color: var(--paragraph-color);
          transition: .3s linear;
      }
      header nav .navCont #navSearchPremium #menuBar #menu a:hover {
-         color: #777777;
+         color: var(--alt-color);
      }
      header nav #searchProfile {
          width: auto;
@@ -1192,7 +1274,7 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
          justify-content: space-between;
      }
 }
-@media all and (max-width: 1250px){
+@media all and (max-width: 1250px) {
     main #supportContactRequest #supportContactRequestHolder {
         display: block;
         width: auto;
@@ -1207,9 +1289,24 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         padding-top: 50px;
         width: 100%;
         height: auto;
-        background: #f2f2f2;
+        background: var(--section-background);
         margin-top: 30px;
         margin-bottom: 0px;
-    }
-    
+    }   
+}
+@media all and (max-width: 767px) {
+ header nav #navSearchPremium #searchProfile #profileHolder #premiumOption {
+    width: auto;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    padding-left: 5px;
+}   
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premiumIcon {
+    margin: 0px;
+    height: auto;  
+}   
+header nav #navSearchPremium #searchProfile #profileHolder #premiumOption p {
+    display: none;
+}
 }

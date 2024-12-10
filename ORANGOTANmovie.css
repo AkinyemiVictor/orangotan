@@ -1,18 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --background-color: rgb(255,255,255);
+    --paragraph-color: rgb(0, 0, 0);
+    --section-background: rgb(242, 242, 242);
+    --alt-color: rgb(119, 119, 119);
+    --shadow-style: 0px 0px 25px -8px rgb(0, 0, 0);
+    --imdb-icon:  rgb(255, 215, 0);
+    --star-rating: rgb(255, 255, 0);
+    --premium-icon: rgb(0, 191, 255);
+    --srollbar-border: 1px solid rgb(0, 0, 0);
+    --placeholder-color: rgb(51, 51, 51);
+}
+[theme = "dark"] {
+    --background-color: rgb(18, 18, 18);
+    --paragraph-color: rgb(255, 255, 255);
+    --section-background: rgb(13, 9, 7);
+    --alt-color: rgb(119, 119, 119);
+    --shadow-style: 0px 0px 25px -8px rgb(0, 0, 0);
+    --imdb-icon:  rgb(255, 215, 0);
+    --star-rating: rgb(255, 255, 0);
+    --premium-icon: rgb(0, 191, 255);
+    --srollbar-border: 1px solid rgb(255, 255, 255);
+    --placeholder-color: rgb(51, 51, 51);
+}
+[theme="dark"] main #darkModeSwitch #modeSwitchCase #modeSwitchBall {
+    left: 25px;
+}
 * {
     font-family: poppins, Tahoma, Verdana;
 }
-body {
+#body {
     width: 100%;
-    height: 100vh;
-    background-color: #ffffff;
+    height: auto;
+    background-color: var(--background-color);
     font-family: poppins, Tahoma, Verdana;
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
 }
 body::-webkit-scrollbar {
-    background:  #f2f2f2;
+    background:  var(--section-background);
      width: 8px;
      border-radius: 5px;
      visibility: visible;
@@ -23,7 +50,7 @@ body::-webkit-scrollbar {
      z-index: auto;
  }
  body::-webkit-scrollbar-thumb {
-    background:  #000000;
+    background:  var(--paragraph-color);
      width: 8px;
      border-radius: 5px;
      visibility: visible;
@@ -64,12 +91,12 @@ header nav .navCont #logoPhrase #logo {
     margin: 0px;
     font-weight: bolder;
     font-size: 25px;
-    color: #000000;
+    color: var(--paragraph-color);
 }
 header nav .navCont #logoPhrase #phrase {
     text-align: center;
     margin: 0px; 
-    color: #000000;
+    color: var(--paragraph-color);
     font-size: 15px;
     font-weight: 400;
 }
@@ -89,7 +116,7 @@ header nav .navCont #navSearchPremium #menuBar #menu a {
     text-decoration: none;
     font-size: 12px;
     font-weight: bolder;
-    color: #000000;
+    color: var(--paragraph-color);
     transition: .3s linear;
 }
 header nav .navCont #navSearchPremium #menuBar #menu a:hover {
@@ -110,13 +137,15 @@ header nav #navSearchPremium #searchProfile .searchBar {
     margin: 0px 20px 0px 0px;
     width: 232px;
     height: 30px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 25px;
 }
 header nav #navSearchPremium #searchProfile .searchBar #searchIcon {
     margin: 0px 5px 0px 5px;
     width: 15px;
     height: 15px;
+    color: var(--paragraph-color);
+    opacity: 50%;
 }
 header nav #navSearchPremium #searchProfile .searchBar #searchInput {
     outline: none;
@@ -127,8 +156,9 @@ header nav #navSearchPremium #searchProfile .searchBar #searchInput {
     border: none;
 }
 header nav #navSearchPremium #searchProfile .searchBar #searchInput::placeholder {
-    color: #000000;
+    color: var(--paragraph-color);
     font-size: 12px;
+    opacity: 50%;
 }
 header nav #navSearchPremium #searchProfile #profileHolder {
     display: flex;
@@ -160,7 +190,7 @@ header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premi
     width: 15px;
     height: 15px;
     font-weight: bolder;
-    color: lightblue;
+    color: var(--premium-icon);
     margin-right: 5px;
 }
 header nav  #profileHolder #premiumOption:hover {
@@ -175,23 +205,28 @@ main #darkModeSwitch {
 main #darkModeSwitch p{
     font-size: 12px;
     margin: 0px;
+    color: var(--paragraph-color);
 }
 main #darkModeSwitch #modeSwitchCase {
     width: 65px;
     height: 30px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 100px;
     display: flex;
     align-items: center;
     margin-left: 10px ;
+    position: relative;
+    cursor: pointer;
 }
-main #darkModeSwitch #modeSwitchCase #modeSwithBall {
+main #darkModeSwitch #modeSwitchCase #modeSwitchBall {
     width: 25px;
     height: 25px;
-    border: 0px;
     border-radius: 100px;
     margin-left: 8px;
-    background-color: #000000;
+    background-color: var(--paragraph-color);
+    border: 0px;
+    position: absolute;
+    transition: left 0.3s;
 }
 main #noticeDiv {
     width: 100%;
@@ -201,7 +236,7 @@ main #noticeDiv {
     justify-content: center;
 }
 main #noticeDiv #noticeBoard {
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border-radius: 8px;
     width: 80%;
     height: auto;
@@ -220,18 +255,21 @@ main #noticeDiv #noticeBoard #cancelNotice{
 }
 main #noticeDiv #noticeBoard #cancelNotice #closeIcon {
     margin: 0px;
+    color: var(--paragraph-color);
 }
 main #noticeDiv #noticeBoard #noticeContainer #noticeHeader {
     font-size: 16px;
     font-weight: bold;
     margin: 0px;
     width: 100%;
+    color: var(--paragraph-color);
 }
 main #noticeDiv #noticeBoard #noticeContainer #note {
     font-size: 14px;
     text-align: justify;
     margin: 0px;
     width: 100%;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------------------Ad-------------------------------------------------*/
 main #ad5 {
@@ -250,36 +288,39 @@ main #ad5 #D5 #subAd1 {
     justify-content: center;
     width: 460px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad5 #D5 #subAd2 {
     display: flex;
     justify-content: center;
     width: 460px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad5 #D5 #subAd3 {
     display: flex;
     justify-content: center;
     width: 460px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad5 #D5 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad5 #D5 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad5 #D5 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------------------Ad-------------------------------------------------*/
 main #filterDiv {
@@ -295,15 +336,17 @@ main #filterDiv #filter #filterTextIcon {
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #filterDiv #filter #filterTextIcon #filterIcon {
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
     margin-left: 6px;
+    color: var(--paragraph-color);
 }
 main #filterDiv #filter #filterContainer {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--background-color);
     padding: 26px 30px 26px 30px;
     box-shadow: 0px 0px 25px -12px #000000;
     border-radius: 8px;
@@ -316,6 +359,7 @@ main #filterDiv #filter #filterContainer #categories #categoryText {
     font-weight: 500px;
     margin-left: 10px;
     margin-bottom: 0px;
+    color: var(--paragraph-color);
 }
 main #filterDiv #filter #filterContainer #categories #categoryContent {
     display: flex;
@@ -329,16 +373,17 @@ main #filterDiv #filter #filterContainer #categories #categoryContent #filt {
     padding: 9.5px 9.5px 9.5px 9.5px;
     font-size: 16px;
     font-weight: 500px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border: none;
     border-radius: 12px;
     outline: none;
     margin: 5px 10px 10px 10px;
+    color: var(--paragraph-color);
 }
 main #filterDiv #filter #filterContainer #categories #categoryContent #filt:hover {
     background: #777777;
     transition-delay: 150ms;
-    color: #f2f2f2;
+    color: var(--section-background);
 }
 main #filterDiv #filter #filterContainer #genreFilter {
     margin: 12px 0px 0px 0px;
@@ -348,6 +393,7 @@ main #filterDiv #filter #filterContainer #genreFilter #genreText {
     font-weight: 500px;
     margin-left: 10px;
     margin-bottom: 0px;
+    color: var(--paragraph-color);
 }
 main #filterDiv #filter #filterContainer #genreFilter #filterContent {
     display: flex;
@@ -367,16 +413,17 @@ main #filterDiv #filter #filterContainer #genreFilter #filterContent #filt {
     padding: 9.5px 9.5px 9.5px 9.5px;
     font-size: 16px;
     font-weight: 500px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border: none;
     border-radius: 12px;
     outline: none;
     margin: 5px 10px 10px 10px;
+    color: var(--paragraph-color);
 }
 main #filterDiv #filter #filterContainer #genreFilter #filterContent #filt:hover {
-background: #777777;
+    background: #777777;
     transition-delay: 150ms;
-    color: #f2f2f2;
+    color: var(--section-background);
 }
 main #filterDiv #filter #filterContainer #genreFilter #filterContent  {
 
@@ -393,12 +440,13 @@ main #ad6 #D6 {
     width: 80%;
     display: flex;
     justify-content: center;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad6 #D6 p {
     display: flex;
     align-items: center;
-    background: #f2f2f2;
+    background: var(--section-background);
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------------------Ad-------------------------------------------------*/
 main #sortDiv {
@@ -414,41 +462,44 @@ main #sortDiv #sort #sortTextIcon {
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #sortDiv #sort #sortTextIcon #sortIcon {
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
     margin-left: 6px;
+    color: var(--paragraph-color);
 }
 main #sortDiv #sort #sortContainer {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--background-color);
     padding: 26px 30px 26px 30px;
     box-shadow: 0px 0px 25px -12px #000000;
     border-radius: 8px;
-    
 }
 main #sortDiv #sort #sortContainer #orderText {
     font-size: 18px;
     font-weight: 500px;
     margin-left: 10px;
     margin-bottom: 0px;
+    color: var(--paragraph-color);
 }
 main #sortDiv #sort #sortContainer #srt {
     width: auto;
     padding: 9.5px 9.5px 9.5px 9.5px;
     font-size: 16px;
     font-weight: 500px;
-    background-color: #f2f2f2;
+    background-color: var(--section-background);
     border: none;
     border-radius: 12px;
     outline: none;
     margin: 5px 10px 10px 10px;
+    color: var(--paragraph-color);
 }
 main #sortDiv #sort #sortContainer #srt:hover {
     background: #777777;
     transition-delay: 150ms;
-    color: #f2f2f2;
+    color: var(--section-background);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 main #ad7 {
@@ -467,36 +518,39 @@ main #ad7 #D7 #subAd1 {
     justify-content: center;
     width: 460px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad7 #D7 #subAd2 {
     display: flex;
     justify-content: center;
     width: 460px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad7 #D7 #subAd3 {
     display: flex;
     justify-content: center;
     width: 460px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad7 #D7 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad7 #D7 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad7 #D7 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 main #movieListDiv {
@@ -512,9 +566,10 @@ main #movieListDiv #movieList #movieText {
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
+    color: var(--paragraph-color);
 }
 main #movieListDiv #movieList #movieListContainer {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--background-color);
     padding: 20px 20px 20px 20px;
     box-shadow: 0px 0px 25px -12px #000000;
     border-radius: 8px;
@@ -528,8 +583,8 @@ main #movieListDiv #movieList #movieListContainer #highlightText {
     margin-top: 26px;
     width: 56px;
     height: 56px;
-    background: #f2f2f2;
-    color: #000000;
+    background: var(--section-background);
+    color: var(--paragraph-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -538,14 +593,14 @@ main #movieListDiv #movieList #movieListContainer #highlightText {
 main #movieListDiv #movieList #movieListContainer #movieBullet {
     display: block;
     margin: 15px 15px 15px 26px;
-    color: #000000;
+    color: var(--paragraph-color);
     
 }
 main #movieListDiv #movieList #movieListContainer #movieBullet #movieItem {
     margin: 0px 0px 0px 12px;
     text-decoration: none;
     font-size: 16px;
-    color: #000000;
+    color: var(--paragraph-color);
     font-weight: 500;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight {
@@ -556,28 +611,28 @@ footer #disclaimerPrivacyPolicyTermsCopyRight {
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #disclaimer {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #privacypolicy {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #terms {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
 footer #disclaimerPrivacyPolicyTermsCopyRight #copyright {
     font-weight: bold;
-    color: #000000;
+    color: var(--paragraph-color);
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
@@ -601,24 +656,26 @@ main #ad8 #D8 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad8 #D8 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad8 #D8 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad8 #D8 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -638,12 +695,13 @@ main #ad9 #D9 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad9 #D9 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -663,36 +721,39 @@ main #ad10 #D10 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad10 #D10 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad10 #D10 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad10 #D10 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad10 #D10 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad10 #D10 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -712,24 +773,26 @@ main #ad11 #D11 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad11 #D11 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad11 #D11 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad11 #D11 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -749,12 +812,13 @@ main #ad12 #D12 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad12 #D12 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -774,36 +838,39 @@ main #ad13 #D13 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad13 #D13 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad13 #D13 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad13 #D13 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad13 #D13 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad13 #D13 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -823,24 +890,26 @@ main #ad14 #D14 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad14 #D14 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad14 #D14 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad14 #D14 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -860,12 +929,13 @@ main #ad15 #D15 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad15 #D15 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -885,36 +955,39 @@ main #ad16 #D16 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad16 #D16 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad16 #D16 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad16 #D16 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad16 #D16 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad16 #D16 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -934,24 +1007,26 @@ main #ad17 #D17 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad17 #D17 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad17 #D17 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad17 #D17 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -971,12 +1046,13 @@ main #ad18 #D18 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad18 #D18 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -996,36 +1072,39 @@ main #ad19 #D19 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad19 #D19 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad19 #D19 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad19 #D19 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad19 #D19 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad19 #D19 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1045,24 +1124,26 @@ main #ad20 #D20 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad20 #D20 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad20 #D20 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad20 #D20 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1082,12 +1163,13 @@ main #ad21 #D21 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad21 #D21 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1107,36 +1189,39 @@ main #ad22 #D22 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad22 #D22 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad22 #D22 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad22 #D22 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad22 #D22 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad22 #D22 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1156,24 +1241,26 @@ main #ad23 #D23 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad23 #D23 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad23 #D23 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad23 #D23 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1193,12 +1280,13 @@ main #ad24 #D24 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad24 #D24 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1218,36 +1306,39 @@ main #ad25 #D25 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad25 #D25 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad25 #D25 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad25 #D25 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad25 #D25 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad25 #D25 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1267,24 +1358,26 @@ main #ad26 #D26 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad26 #D26 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad26 #D26 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad26 #D26 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1304,12 +1397,13 @@ main #ad27 #D27 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad27 #D27 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1329,36 +1423,39 @@ main #ad28 #D28 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad28 #D28 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad28 #D28 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad28 #D28 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad28 #D28 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad28 #D28 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1378,24 +1475,26 @@ main #ad29 #D29 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad29 #D29 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad29 #D29 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad29 #D29 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1415,12 +1514,13 @@ main #ad30 #D30 #subAd1 {
     justify-content: center;
     width: 100%;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad30 #D30 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1440,36 +1540,39 @@ main #ad31 #D31 #subAd1 {
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad31 #D31 #subAd2 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad31 #D31 #subAd3 {
     display: flex;
     justify-content: center;
     width: 440px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad31 #D31 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad31 #D31 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad31 #D31 #subAd3 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 /*------------------------------------------------Ad-----------------------------------------------*/
@@ -1489,24 +1592,26 @@ main #ad32 #D32 #subAd1 {
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad32 #D32 #subAd2 {
     display: flex;
     justify-content: center;
     width: 660px;
     height: 160px;
-    background: #f2f2f2;
+    background: var(--section-background);
 }
 main #ad32 #D32 #subAd1 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 main #ad32 #D32 #subAd2 p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--paragraph-color);
 }
 /*------------------------------------------------Ad-----------------------------------------------*/
 header nav .navCont #navSearchPremium #hamburgerMenu {
@@ -1516,7 +1621,7 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
     display: hidden;
     width: 30px;
     height: 3px;
-    background-color: #000;
+    background-color: var(--paragraph-color);
     border-radius: 8px;
     margin: 5px 10px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1558,7 +1663,7 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         right: -100%; 
         top: 8.5rem;
         flex-direction: column;
-        background: #f2f2f2;
+        background: var(--section-background);
         width: 50%;
         border-radius: 10px;
         transition: 0.3s;
@@ -1593,12 +1698,12 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         margin: 0px;
         font-weight: bolder;
         font-size: 20px;
-        color: #000000;
+        color: var(--paragraph-color);
     }
     header nav .navCont #logoPhrase #phrase {
         text-align: center;
         margin: 0px; 
-        color: #000000;
+        color: var(--paragraph-color);
         font-size: 10px;
         font-weight: 400;
     }
@@ -1609,7 +1714,7 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         text-decoration: none;
         font-size: 12px;
         font-weight: bolder;
-        color: #000000;
+        color: var(--paragraph-color);
         transition: .3s linear;
      }
      header nav .navCont #navSearchPremium #menuBar #menu a:hover {
@@ -1623,22 +1728,19 @@ header nav .navCont #navSearchPremium #hamburgerMenu #hamburgerIcon {
         justify-content: space-between;
      }
 }
-@media all and (max-width: 1050px){
+@media all and (max-width: 767px) {
     header nav #navSearchPremium #searchProfile #profileHolder #premiumOption {
-        width: auto;
-        height: 24px;
-        border-radius: 4px;
-        border: none;
-        font-weight: bolder;
-        padding-left: 5px;
-    }
-    header nav #navSearchPremium #searchProfile #profileHolder #premiumOption p{
-        display: hidden;
-        width: 133px;
-        height: 24px;
-        border-radius: 4px;
-        border: none;
-        font-weight: bolder;
-        padding-left: 5px;
-    }
-}
+       width: auto;
+       height: 24px;
+       border-radius: 4px;
+       border: none;
+       padding-left: 5px;
+   }   
+   header nav #navSearchPremium #searchProfile #profileHolder #premiumOption #premiumIcon {
+       margin: 0px;
+       height: auto;  
+   }   
+   header nav #navSearchPremium #searchProfile #profileHolder #premiumOption p {
+       display: none;
+   }
+   }

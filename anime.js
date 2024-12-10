@@ -1,3 +1,30 @@
+//---------------------------------------------Mode Switch------------------------------------------------------------
+const themeToggleButton = document.querySelector('#modeSwitchCase');
+const htmlElement = document.documentElement; 
+
+function applyDarkMode(isDark) {
+    if (isDark) {
+        htmlElement.setAttribute('theme', 'dark');
+    } else {
+        htmlElement.removeAttribute('theme');
+    }
+}
+
+// Check local storage for theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    applyDarkMode(true);
+} else {
+    applyDarkMode(false);
+}
+
+themeToggleButton.addEventListener('click', () => {
+    const isDarkMode = htmlElement.hasAttribute('theme') && htmlElement.getAttribute('theme') === 'dark';
+    applyDarkMode(!isDarkMode);
+    // Save theme preference in local storage
+    localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+});
+//---------------------------=---------------Hamburger Menu------------------------------------------------------------
 const hamburger = document.querySelector("#hamburgerMenu");
 const menuBar = document.querySelector("#menuBar");
 
